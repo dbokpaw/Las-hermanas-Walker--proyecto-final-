@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
       description: "Un papel maltratado con notas ambiguas que solo añaden confusión.",
       category: "objeto",
       rarity: 2,
-      icon: "./img/folio_arrugado.webp"  
+      icon: "folio_arrugado.webp"  
     });
 
     window.InventorySystem.initInventoryUI();
