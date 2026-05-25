@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
       description: "Compañero de piso de Hyuk. Su tono sugiere que sabe más de lo que aparenta.",
       category: "persona",
       rarity: 4,
-      icon: "../img/erik-icon.webp" 
+      icon: "erik-icon.webp" 
 
     });
 
