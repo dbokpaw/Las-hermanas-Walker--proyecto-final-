@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Audrey Dos</title>
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body class="scene-body">
+  <main class="scene-wrap grey-text">
+    <p>
+      —No... No llevo demasiado tiempo aquí. Antes vivía en Nueva York y por trabajo he venido aquí...
+    </p>
+
+    <p>
+      Audrey parece bastante turbada por el reencuentro con Terry. El que ésta se haya presentado como su hermana,
+      Ivy, le resulta todavía más escalofriante. Audrey está segura de que a quien ve y oye en este preciso instante
+      es a Terry.
+    </p>
+
+    <p>Podría jurarlo.</p>
+
+    <p>
+      —Creo que voy a irme... —masculla Audrey mientras atrapa un mechón azabache entre sus dedos.
+      La maldita experiencia le dicta a Terry que dicho gesto no es coqueto, sino de pura incomodidad.
+    </p>
+
+    <p>¿Qué va a hacer Terry ante esto?</p>
+
+    <p class="choices-line">
+      <a href="audreydosb.html" class="choice-link">Dejarla ir</a>
+      <span> | </span>
+      <a href="audreydosa.html" class="choice-link">Pedirle que se quede</a>
+    </p>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">
+    Inventario
+  </button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="../../javascript/inventory.js"></script>
+  <script src="../../javascript/audreydos.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>

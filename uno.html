@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Uno - Reddit Scroll</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="scene-body">
+  <!-- Fondo de escritorio (fuera del móvil) -->
+  <div class="desktop-bg"></div>
+  
+  <!-- Móvil Reddit -->
+  <div class="reddit-phone">
+    <!-- Barra de estado del móvil -->
+    <div class="phone-status-bar">
+      <span class="time">9:41</span>
+      <span class="battery">🔋 87%</span>
+    </div>
+    
+    <!-- Header de Reddit -->
+    <div class="reddit-header">
+      <button class="reddit-back" aria-label="Volver">←</button>
+      <div class="reddit-logo">
+        <span class="reddit-icon">📱</span>
+        <span class="reddit-name">reddit</span>
+      </div>
+      <button class="reddit-menu" aria-label="Menú">⋯</button>
+    </div>
+    
+    <!-- Subreddit info -->
+    <div class="subreddit-bar">
+      <span class="subreddit-name">r/7_dreamers</span>
+      <span class="subreddit-meta">🔒 12.3k miembros • 🔴 847 online</span>
+    </div>
+    
+    <!-- Contenido scrolleable estilo Reddit -->
+    <div class="reddit-scroll-container">
+      <div class="reddit-posts">
+        <!-- Post principal con la narrativa -->
+        <article class="reddit-post">
+          <div class="post-header">
+            <div class="post-author">
+              <div class="avatar-img">
+                <img src="img/avatars/firstonirica.png" alt="Avatar" class="user-avatar">
+              </div>
+              <span class="author-name">u/FIRST_ONIRICA</span>
+              <span class="post-time">• hace 4 horas</span>
+            </div>
+            <div class="post-badge">
+              <span class="spoiler-tag">TEORÍA</span>
+            </div>
+          </div>
+          
+          <div class="post-content">
+            <p>
+              Conforme te vas sumergiendo en la página web, llegas a la conclusión de que no están del todo equivocados…
+              Te acuerdas de esa entrevista en la que Ivy hablaba de su hermana Terry.
+            </p>
+
+            <p>
+              «<em>Esa Terry es una canalla</em>». Eso es lo que pensaste cuando acabó la entrevista.
+              Eso y que el parecido era asombroso… Bueno. A fin de cuentas, eran <strong>gemelas</strong>.
+            </p>
+
+            <p>
+              Las horas pasan…, y pasan… y pasan. Sientes los ojos cansados de tanto mirar esa página interminable
+              de teorías conspiranoicas, como si buscases más fuel para el fuego de tu imaginación.
+              Las letras <span class="sway-text">bailan</span> y se vuelven
+              <span class="blur-text">menos claras</span> a medida que sientes el cansancio apoderarse de ti.
+            </p>
+
+            <p>
+              Cuando te decides a marcharte a la cama, te llega una nueva notificación.
+              Llevas la mano al móvil de Ivy, pero descubres que es el tuyo.
+              ¿Qué es lo que harás?
+            </p>
+          </div>
+          
+          <!-- Acciones estilo Reddit -->
+          <div class="post-actions">
+            <button class="action-btn">⬆️ 47</button>
+            <button class="action-btn">💬 12 comentarios</button>
+            <button class="action-btn">🔗 Compartir</button>
+          </div>
+        </article>
+        
+        <!-- Comentarios estilo Reddit (con las decisiones) -->
+        <div class="comments-section">
+          <div class="comments-header">
+            <span>Comentarios (12)</span>
+            <button class="sort-btn">Ordenar por: mejores ▼</button>
+          </div>
+          
+          <!-- Comentario - Decisión 1 -->
+          <div class="comment">
+            <div class="comment-author">
+              <div class="avatar-img">
+                <img src="img/avatars/notabcticon.png" alt="Avatar de @notabct" class="user-avatar">
+              </div>
+              <span class="author-name">@notabct</span>
+              <span class="comment-time">• hace 2 horas</span>
+            </div>
+            <div class="comment-content">
+              <p>No puedes ignorar una notificación en un momento como este. Revisa el móvil, puede ser la clave.</p>
+              <a href="dos.html" class="comment-choice-link">📱 Mirar tu móvil →</a>
+            </div>
+            <div class="comment-replies">
+              <div class="comment">
+                <div class="comment-author">
+                  <div class="avatar-img">
+                    <img src="img/avatars/seomywifeicon.png" alt="Avatar de @seohyungismywife" class="user-avatar">
+                  </div>
+                  <span class="author-name">@seohyungismywife</span>
+                  <span class="comment-time">• hace 1 hora</span>
+                </div>
+                <div class="comment-content">
+                  <p>Totalmente de acuerdo. Además, Ivy nunca avisa sin razón. Algo importante debe ser.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Comentario - Decisión 2 -->
+          <div class="comment">
+            <div class="comment-author">
+              <div class="avatar-img">
+                <img src="img/avatars/audreystanicon.png" alt="Avatar de @audrey.stan" class="user-avatar">
+              </div>
+              <span class="author-name">@audrey.stan</span>
+              <span class="comment-time">• hace 3 horas</span>
+            </div>
+            <div class="comment-content">
+              <p>Estás agotado, los ojos te pesan. A veces dormir es la mejor decisión para procesar todo.</p>
+              <a href="tres.html" class="comment-choice-link">😴 Irte a dormir →</a>
+            </div>
+            <div class="comment-replies">
+              <div class="comment">
+                <div class="comment-author">
+                  <div class="avatar-img">
+                    <img src="img/avatars/poisonivyicon.png" alt="Avatar de @poisonivy" class="user-avatar">
+                  </div>
+                  <span class="author-name">@poisonivy</span>
+                  <span class="comment-time">• hace 2 horas</span>
+                </div>
+                <div class="comment-content">
+                  <p>El cansancio distorsiona la realidad. Mañana todo será más claro. Descansa.</p>
+                </div>
+              </div>
+              <div class="comment">
+                <div class="comment-author">
+                  <div class="avatar-img">
+                    <img src="img/avatars/notabcticon.png" alt="Avatar de @notabct" class="user-avatar">
+                  </div>
+                  <span class="author-name">@notabct</span>
+                  <span class="comment-time">• hace 1 hora</span>
+                </div>
+                <div class="comment-content">
+                  <p>Pero si duerme, ¿y si se pierde algo importante? Estos momentos no se repiten.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Comentario adicional de ambientación -->
+          <div class="comment">
+            <div class="comment-author">
+              <div class="avatar-img">
+                <img src="img/avatars/firstonirica.png" alt="Avatar de u/FIRST_ONIRICA" class="user-avatar">
+              </div>
+              <span class="author-name">u/FIRST_ONIRICA</span>
+              <span class="comment-time">• hace 4 horas</span>
+            </div>
+            <div class="comment-content">
+              <p>Algo en la forma que Ivy habla de Terry no me cuadra. Son gemelas, pero las trata como si fueran completas opuestas. Demasiado para ser casualidad.</p>
+            </div>
+            <div class="comment-replies">
+              <div class="comment">
+                <div class="comment-author">
+                  <div class="avatar-img">
+                    <img src="img/avatars/seomywifeicon.png" alt="Avatar de @seohyungismywife" class="user-avatar">
+                  </div>
+                  <span class="author-name">@seohyungismywife</span>
+                  <span class="comment-time">• hace 3 horas</span>
+                </div>
+                <div class="comment-content">
+                  <p>Las gemelas a menudo desarrollan personalidades complementarias o antagónicas. Pero sí, hay algo raro en cómo evita detalles específicos.</p>
+                </div>
+              </div>
+              <div class="comment">
+                <div class="comment-author">
+                  <div class="avatar-img">
+                    <img src="img/avatars/poisonivyicon.png" alt="Avatar de @poisonivy" class="user-avatar">
+                  </div>
+                  <span class="author-name">@poisonivy</span>
+                  <span class="comment-time">• hace 2 horas</span>
+                </div>
+                <div class="comment-content">
+                  <p>Tal vez Terry no es solo "la hermana mala". Quizás hay algo más profundo que Ivy no quiere admitir.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Comentario de @audrey.stan -->
+          <div class="comment">
+            <div class="comment-author">
+              <div class="avatar-img">
+                <img src="img/avatars/audreystanicon.png" alt="Avatar de @audrey.stan" class="user-avatar">
+              </div>
+              <span class="author-name">@audrey.stan</span>
+              <span class="comment-time">• hace 3 horas</span>
+            </div>
+            <div class="comment-content">
+              <p>Por cierto, ¿alguien notó que la página empezó a hacer cosas raras cuando llegaste a esa parte? Las letras bailaban, se volvían borrosas... No será el cansancio, ¿verdad?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Barra de navegación inferior estilo Reddit -->
+    <div class="reddit-nav-bar">
+      <button class="nav-btn active">🏠 Inicio</button>
+      <button class="nav-btn">🔍 Explorar</button>
+      <button class="nav-btn">➕ Crear</button>
+      <button class="nav-btn">💬 Notificaciones</button>
+      <button class="nav-btn">👤 Perfil</button>
+    </div>
+  </div>
+
+  <!-- Botón de inventario (se mantiene igual) -->
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">
+    Inventario
+  </button>
+
+  <!-- Panel de inventario (se mantiene igual) -->
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="./javascript/inventory.js"></script>
+  <script src="./javascript/uno.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+  
+</body>
+</html>

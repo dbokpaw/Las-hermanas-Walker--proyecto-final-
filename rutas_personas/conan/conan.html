@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conan - La revelación</title>
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body class="scene-body">
+  <main class="scene-wrap grey-text">
+    <p>
+      Podía sentir el agotamiento adherido a los huesos de su menudo cuerpo. Cada paso era dado como si un empellón
+      motivase dicho movimiento. La energía de la neoyorquina se había transformado en los alaridos que había dado en
+      el concierto de la noche anterior. Habiéndose visto desprovista de tareas gracias a la intensa jornada nocturna,
+      Terry se había acogido al favor de sus horas semanales libres y las adjudicó a aquel día de la semana.
+      Liberador, parecía.
+    </p>
+
+    <p>
+      Cuando amaneció, Terry todavía estaba en la cama. Recitaba como un mantra el lema de su hermana, como si de ese
+      modo fuera capaz de acceder a la simbiosis que consagrase su actitud perfecta en cuanto a mimesis. Rio en el lecho,
+      con una carcajada mordaz que precedió al desperezarse. ¿Por qué había accedido a aquella vida? ¿Por dinero? ¿Por celos?
+      ¿Acaso se trataba del irremediable deseo de fama que va ligado al error inevitable?
+    </p>
+
+    <p>
+      Fuera como fuese, ahora aquella era su vida. Y debía ser capaz de enfrentarla con temple y hacerle frente a cuanto
+      su hermana, Ivy, había dejado a la mitad.
+    </p>
+
+    <p class="centered">━━━━━﹙ ♊︎ ﹚━━━━━</p>
+
+    <p>
+      Quedó la tarde para la entera disposición de la joven, quien optó por relajarse en la fiesta de inauguración hasta
+      que todo aquello le resultase insoportable, momento que llega en lo álgido de la noche; en el cual un carraspeo
+      precede al golpe seco que la turba sobremanera:
+    </p>
+
+    <p>
+      —Tú... ¿Es que no reconoces a tu propia hija, Ivy...?<br />
+      —¿Disculpa?
+    </p>
+
+    <p>
+      Las primeras palabras del varón invocan la ceja alzada y la expresión de puro desconcierto. Cree, en primera instancia,
+      que el hombre que le habla está en un error, que se ha equivocado de persona; sin embargo, cuando pronuncia el nombre
+      de su hermana… El <em>ahora suyo</em>. Su rostro padece un matiz macilento.
+    </p>
+
+    <p>
+      —¿Mi… Hija? —Sus ojos, prácticamente desorbitados, se posan con gravedad sobre la criatura de once meses.
+      No puede ser cierto.
+      <a href="conandos.html" class="choice-link">¿Qué es lo que había hecho su hermana?</a>
+    </p>
+
+    <div class="centered top-gap">
+      <img
+        src="../../img/conanybebe.png"
+        alt="Conan sosteniendo a una bebé de once meses en sus brazos. El hombre tiene expresión seria y preocupada, mientras la bebé juega con el collar de su camisa. El fondo es una habitación tenue de la fiesta de inauguración."
+        class="scene-image"
+        loading="lazy"
+        srcset="
+          ../../img/conanybebe-400.webp 400w,
+          ../../img/conanybebe.webp 800w
+        "
+        sizes="
+          (max-width: 600px) 400px,
+          800px
+        "
+        width="500w"
+        height="auto"
+      />
+    </div>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">
+    Inventario
+  </button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="../../javascript/inventory.js"></script>
+  <script src="../../javascript/conan.js"></script>
+  <script src="../../javascript/investigation-layer.js"></script>
+
+</body>
+</html>

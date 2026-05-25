@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Las Hermanas Walker - Historia interactiva</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-tags="teorias">
+  <main class="cover">
+    <a href="despierta.html" id="start-link" class="cover-link" aria-label="Empezar historia">
+      <img
+        class="cover-image"
+        src="./img/hermanaswalker.webp"
+        alt="Portada de Las Hermanas Walker."
+        loading="lazy"
+        srcset="
+          ./img/hermanaswalker.webp 1200w
+        "
+        sizes="
+          (max-width: 800px) 800px,
+          1200px
+        "
+        width="100%"
+        height="auto"
+      />
+      <section class="cover-text">
+        <h1>LAS HERMANAS WALKER</h1>
+        <p>Una historia interactiva de Sofía González Regis.</p>
+        <p>Producción de Materiales Multimedia</p>
+        <p>Máster en Letras Digitales</p>
+        <p>Universidad Complutense de Madrid</p>
+        <p class="hint">(Haz click en el título para empezar)</p>
+      </section>
+    </a>
+
+    <!--La declaración-->
+    <div class="declaracion-container">
+      <div class="declaracion-header" onclick="toggleDeclaracion()">
+        <span class="declaracion-titulo">Declaración de uso de materiales (Ley Propiedad Intelectual)</span>
+        <button class="declaracion-toggle" id="toggleBtn">Leer más ▼</button>
+      </div>
+
+      <div class="declaracion-contenido" id="declaracionContent">
+        <p><strong>DECLARACIÓN SOBRE EL USO DE MATERIALES CON FINES EDUCATIVOS</strong></p>
+
+        <p>El presente trabajo es un proyecto de clase elaborado por <strong>Sofía González</strong> para la asignatura <strong>Producción de Materiales Multimedia</strong> del curso <strong>2025/2026</strong>.</p>
+
+        <p><strong>1. Finalidad y ámbito de aplicación</strong><br>
+        Este proyecto tiene una <strong>finalidad exclusivamente educativa y no comercial</strong>. Se acoge a las excepciones al derecho de autor establecidas en el <strong>artículo 32 (Cita e Ilustración con fines educativos) del Real Decreto Legislativo 1/1996, por el que se aprueba el Texto Refundido de la Ley de Propiedad Intelectual (LPI)</strong>.</p>
+
+        <p><strong>2. Materiales utilizados y atribución</strong><br>
+        En este trabajo se han utilizado fragmentos de las siguientes obras, cuyos derechos de autor pertenecen a sus respectivos creadores. Su inclusión se hace a título de cita, comentario o para su análisis dentro del discurso de este proyecto:</p>
+
+        <ul>
+          <li><strong>Imágenes:</strong><br>
+            Fotografías de las artistas SuA y JiU, pertenecientes al grupo musical Dreamcatcher.<br>
+            Imágenes de stock. <em>Fuentes: Unsplash, Pexels</em></li>
+            Música de stock. <em>Fuentes: Pixabay</em></li>
+          <li><strong>Fragmentos audiovisuales:</strong><br>
+            Serie de televisión <em>Mine</em> (2021), creada por Baek Mi-kyung para tvN.<br>
+            Película <em>Vértigo (Vertigo)</em> (1958), dirigida por Alfred Hitchcock.</li>
+        </ul>
+
+        <p><strong>3. Limitaciones del uso</strong><br>
+        Se hace constar expresamente que:</p>
+
+        <ul>
+          <li>La inclusión de estos materiales se limita a lo estrictamente necesario para ilustrar el contenido educativo del proyecto.</li>
+          <li>La autora de este trabajo no reclama ningún derecho de propiedad sobre los materiales incluidos.</li>
+          <li>Este documento y su contenido no están afiliados, patrocinados ni respaldados oficialmente por los titulares de los derechos de autor de los materiales citados.</li>
+        </ul>
+
+        <p><strong>4. Programas o aplicaciones empleadas</strong><br>
+
+        <ul>
+          <li>Para la edición de imágenes se ha hecho uso de Photopea y Clip Studio Paint. <strong>Tema 1</strong></li>
+          <li>Para la creación de imágenes generadas por IA se ha hecho uso de Gemini. <strong>Tema 2</strong></li>
+          <li>Para la edición de audio se ha hecho uso de Audacity y Movavi Video Suite 17. <strong>Tema 3</strong></li>
+          <li>Para la edición de vídeo se ha hecho uso de CapCut y Movavi Video Suite 17. <strong>Tema 4</strong></li>
+          <li>La obra es la continuación de la creada para clase por medio de Twine. <strong>Tema 5</strong></li>
+          <li>Para la programación de la web se ha hecho uso de Visual Studio Code y Cursor. <strong>Tema 6</strong></li>
+        </ul>
+      </div>
+    </div>
+    
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">
+    Inventario
+  </button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="./javascript/inventory.js"></script>
+  <script src="./javascript/script.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+  <script src="./javascript/declaracion.js"></script>
+
+
+</body>
+</html>

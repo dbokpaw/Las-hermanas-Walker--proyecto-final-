@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rumor Dos</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="scene-body" data-tags="final">
+  <main class="scene-wrap" style="color: white !important;">
+    <p>
+      —Todo el mundo en el edificio habla de ti y de esa cría de Conan.
+    </p>
+
+    <p>
+      Su voz ligera consigue enfurecer a Terry, pero una parte de sí no termina de prestarle atención.
+      A fin de cuentas, ha conseguido sortear el bache antes. Su atención va más allá de su familia, porque Erik añade unas nuevas palabras:
+    </p>
+
+    <p class="centered">
+      «Todo el mundo en el edificio habla de ti y de <em>Audrey</em>».
+    </p>
+
+    <p>
+      Los ojos de Erik la atrapan de inmediato, porque en su voz hay una calma anormal, pero en el iris del chico refulgen los celos.
+      Una ira enfermiza que se <span class="buoy-text">derrama</span> hasta la boca.
+    </p>
+
+    <p>
+      La expresión de la actriz es de sorpresa e incredulidad. Cada vez que quería olvidarla, allí estaba una vez más, en sus sueños,
+      en las pesadillas o en los recuerdos que la asaltaban para quedar adheridos en una parte de su mente: ella riendo, ella en la noche neoyorkina,
+      ella bajo sus manos. Intenta centrarse, pero no entiende por qué Erik, que siempre parece querer desentenderse de todo, le habla de esto.
+    </p>
+
+    <p>
+      —¿Y qué?<br />
+      —Pues que está mal. —Erik se mueve y parece dejarse alimentar por una rabia, cálida y agradable, que llevaba esperando bajar a su estómago,
+      atascada en su garganta desde hace tiempo— Es enfermizo. Y la forma en la que la miras... No puedes engañarme.
+      —La sonrisa le serpentea por la boca, cínica y helada— No puedes hacerle esto a tus fans...
+    </p>
+
+    <p>Terry traga saliva.</p>
+
+    <p>
+      —No sé de qué estás hablando.<br />
+      —¿De veras? Porque eso no es lo que he descubierto.
+      —Erik hunde la mano en su bolsillo para sacar unas cuantas fotografías que le arroja—
+      En la plataforma <span style="color:#e6e64c;">Severance</span> hay gente muy aplicada y con muchos recursos, ¿sabes?
+      Todos queremos saber si aquello por lo que pagamos es bueno.
+    </p>
+
+    <div class="centered top-gap">
+      <img
+        src="../img/fotoscomprometedoras-400.webp"
+        alt="Terry y Audrey juntas en varias fotografías: abrazadas, tocándose la cara. Imágenes que parecen sacadas de un seguimiento fotográfico."
+        class="scene-image"
+        loading="lazy"
+        srcset="
+          ../img/fotoscomprometedoras-400.webp 400w,
+          ../img/fotoscomprometedoras-800.webp 800w,
+          ../img/fotoscomprometedoras-1200.webp 1200w
+        "
+        sizes="
+          (max-width: 600px) 400px,
+          (max-width: 1200px) 800px,
+          1200px
+        "
+      />
+    </div>
+
+    <p>
+      Terry toma las fotografías entre sus manos. Verse junto a Audrey en ellas solo dispara la alarma.
+      Con los ojos desorbitados y la respiración afectada, le suelta a Erik:
+    </p>
+
+    <p>
+      —¿Esto de qué coño va? ¿Quién eres, enfermo de mierda?<br />
+      —No hace falta ponerse <a href="farsante.html" class="choice-link">nerviosa</a>, <em>Terry</em>.
+    </p>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">Inventario</button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="../javascript/inventory.js"></script>
+  <script src="../javascript/rumordos.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>

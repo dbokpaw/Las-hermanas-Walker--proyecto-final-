@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apagón Tres B</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="scene-body" data-tags="apagon">
+  <main class="scene-wrap grey-text">
+    <p>
+      —Oh, qué va... Qué va... Es de Conan, claro. Yo simplemente soy <em>como</em> su tía.
+    </p>
+
+    <p>
+      Juega con la pequeña entre sus brazos bajo la atenta mirada de Audrey,
+    </p>
+
+    <p>
+      —Si me disculpáis, chicos... —La artista deja a su sobrina en brazos de Conan una vez más.
+      El <em>azabache</em> retoma la conversación, haciendo caso omiso al hecho de que su Ivy
+      ha tomado ciertos riesgos al responder de tal modo.
+    </p>
+
+    <p>
+      Terry se mueve por el rellano a sabiendas de que cada paso que da es contemplado por la productora musical.
+      ¿Por qué Terry sigue pretendiendo que nada le importa? Su versionado de Ivy implica no saber nada de Audrey más
+      de lo que le ha dado a conocer en aquellas semanas, pero su ignorancia parte ahora de un filo dañino.
+      Éste lo habían supuesto las lenguas afiladas de unos indiscretos vecinos.
+      «<span class="outline-text">¿Has visto a esas dos? ¿Cómo se tratan? Ahí debe de haber algo más.</span>»
+    </p>
+
+    <p>
+      La noche que tenía en mente, lejana en tiempo y espacio, era aquella en la que pudieron disfrutar de un baile propio
+      y la fragancia íntima de la otra, lo que supuso un problema porque Audrey se marchó al día siguiente, y en este día,
+      una reflexión que Terry prefiere evitar.
+    </p>
+
+    <p>
+      Si finge que nada había sucedido, todo estará bien. <em>¿No…?</em> No es que hubiera estado deseando a cada segundo volver
+      a ver a Audrey. Saber qué había estado haciendo durante su ausencia.
+    </p>
+
+    <p>
+      «<em>En absoluto</em>», trataba de convencerse, «no es como si me hubiera dado un vuelco al corazón cuando lo primero que veo
+      es su cara, al volver la luz, al haberse <span class="smear-text">iluminado</span> todo de nuevo…»
+    </p>
+
+    <p>
+      —Hey, Audrey...<br />
+      —Ivy.<br />
+      —¿Quieres que busquemos a <span class="pink-text">Nana</span> para ver qué ponemos en claro de todo esto?
+    </p>
+
+    <p>
+      La morena se retuerce las manos. Está visiblemente incómoda con ella. A fin de cuentas, es cómplice involuntario del secreto de Terry,
+      y no es de extrañar que desee alejarse todo lo que pueda de ella, aun siendo formal.
+    </p>
+
+    <p>
+      <a href="apagoncuatroa.html" class="choice-link">—Yo lo haré contigo, Ivy.</a>
+    </p>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">Inventario</button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="../javascript/inventory.js"></script>
+  <script src="../javascript/apagontresb.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Audrey Dos A</title>
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body class="scene-body">
+  <main class="scene-wrap grey-text">
+    <p>
+      Sin embargo, pese haber sabido, con el lenguaje de las manos, leer en braille cada surco de su piel
+      pero también sus labios, Terry prefiere omitir que ha presenciado esa expresión o que haya sido testigo
+      de ese deseo de huida.
+    </p>
+
+    <p>
+      —Quédate. —espeta, de pronto.
+    </p>
+
+    <p>
+      Por la brillante cúpula de sus ojos cruza como un rayo el atisbo de una seguridad que antaño no estuvo presente.
+      Aunque pueda parecer una orden, quizá se asemeja a un lamento, a una solicitud queda. Parece carecer de una secuencia
+      que le correspondía por natura: «<em>Hazlo. No como la última vez.</em>»
+    </p>
+
+    <p>
+      Terry se percata al instante de que ha posado su mano sobre el brazo ajeno, su meñique roza la muñeca.
+      La aparta con alarma, pero no resulta brusca.
+    </p>
+
+    <p>
+      —Y-yo también… —Trata de retomar la conversación previa, en un burdo intento por retenerla—
+      Bueno, hace apenas unos meses. En comparación ya no puedo decir que sea “<em>exactamente nueva</em>” en Gangnam
+      —trata de hablar con soltura y dulze matiz, pero es incapaz de no admirarla con asombro y compleja fragancia en su interior.
+      Quiere preguntarle tantas cosas. Y sin embargo
+      <a href="audreydosab.html" class="choice-link">ninguna</a> de ellas serán oídas por Audrey esta noche.
+    </p>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">
+    Inventario
+  </button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="../../javascript/inventory.js"></script>
+  <script src="../../javascript/audreydosa.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>

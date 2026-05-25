@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ella</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="scene-body" data-tags="escaleras">
+  <main class="scene-wrap text-outline">
+    <p>
+      Al abalanzarse sobre ella, Erik pierde el equilibrio. Es la urgencia de la defensa lo que evoca todo lo aprendido,
+      la memoria muscular de la pelirroja hace que le aseste un gancho en el estómago, lo que facilita el que sortee
+      el giro del cuchillo y se sitúe tras él en lo que pierde el aire de los pulmones.
+    </p>
+
+    <p>
+      El chico renquea, y al darse la vuelta, encuentra a una Terry más que preparada para el siguiente asalto.
+      Ella, siempre proclive a las trampas, al aprovechar cada hueco en blanco donde instalarse, vuelve a golpearlo
+      con un puño severo que le hunde el pómulo y lo sentencia al vacío.
+    </p>
+
+    <p>
+      Erik se debate entre <em>la vida y la muerte</em> cuando golpea su baja espalda con la barandilla.
+      El vértigo se apodera incluso de Walker, con solo mirar. Los <span class="rumble-text">aspavientos</span> del chico
+      parecen durar toda una vida, pero su último aliento persiste apenas una milésima de segundo.
+    </p>
+
+    <p>
+      Cuando <span class="buoy-text">cae</span> al vacío, desde el décimo piso del edificio Hoshigo y en la ardiente oscuridad
+      de un apagón, Terry toma una última decisión, pero esta vez, no nos dejará conocerla.
+    </p>
+
+    <div class="centered fin-block">
+      <p id="fin-e-1" class="hidden fade-line fin-letter">F</p>
+      <p id="fin-e-2" class="hidden fade-line fin-letter">I</p>
+      <p id="fin-e-3" class="hidden fade-line fin-letter">N</p>
+    </div>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">Inventario</button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="../javascript/inventory.js"></script>
+  <script src="../javascript/ella.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>

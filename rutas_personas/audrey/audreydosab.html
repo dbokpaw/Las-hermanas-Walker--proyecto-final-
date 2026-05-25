@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Audrey Dos AB</title>
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body class="scene-body">
+  <main class="scene-wrap grey-text">
+    <p>
+      Audrey supone una suerte de ensoñación. Atisbarla entre la multitud no materializó la realidad palpable
+      hasta que intercambiaron palabra. Quizá fue por ello por lo que lo hizo. Quizá fue por ello por lo que se acercó.
+    </p>
+
+    <p>
+      Se cree un insecto malherido por la afección del deseo. Un hálito de encantamiento que correspondía a todo lo
+      compartido juntas en el pasado. Si bien convocado en el lapso de una noche.
+      <em>¿Cómo ha sido posible?</em>, se preguntó en su momento, <em>sentir esta conexión, una suerte de alta tensión
+      que recorre cerebro, cuerpo y... <span style="color:#8a1414;">Corazón</span>.</em>
+    </p>
+
+    <p>
+      La última palabra todavía le quema. Se había considerado débil y estúpida por sucumbir.
+      Y no quiso volver a hacerlo. No quiso volver a caer por la misma trampilla y derrumbarse.
+    </p>
+
+    <p>
+      —Hm. Yo me dedico a viajar de acá para allá. Soy productora musical.<br />
+      —¿Ah, sí? ¿Cuánto tiempo llevas viajando? Yo soy <em><strong>actriz</strong></em>, estamos grabando una serie en
+      los estudios de Pearl, así que, por suerte, esta vez trabajo cerca de casa.<br />
+      —Me encantaría seguir hablando, pero... Hm, se me ha hecho tarde y creo que iré a dormir. Mañana trabajo.
+    </p>
+
+    <p>
+      Audrey había comenzado a mostrarse confundida e incómoda, además, evitaba el contacto visual.
+      Está claro que desea marcharse, que prefiere dejar las cosas tal y como estaban... Incluso si en un primer momento
+      parecía ir a seguirle el juego.
+    </p>
+
+    <p>
+      Si bien Terry siente una oleada de tristeza, tan súbita como desagradable, no quiere presionar a quien fue su <em>quizás</em>.
+      La americana debe <a href="audreydosb.html" class="choice-link">hacer algo honroso por primera vez en su vida</a>.
+    </p>
+
+    <p class="centered black-text">
+      Qué bien <span class="blur-text">funcionaba Audrey</span>
+      <span class="blurrier-text">como recuerdo.</span>
+    </p>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">
+    Inventario
+  </button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="../../javascript/inventory.js"></script>
+  <script src="../../javascript/audreydosab.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>

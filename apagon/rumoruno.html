@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rumor Uno</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="scene-body" data-tags="final">
+  <main class="scene-wrap" style="color: white !important;">
+    <p>
+      —Hay un rumor acerca de ti... De las chicas de la empresa D.R.E.A.M.
+    </p>
+
+    <p>
+      Terry alza la vista para fijarse en la expresión de descaro que adivina a través de su voz.
+      Ella misma no habla porque odiaría el leve temblor que se colaría en la propia.
+      Sin embargo, cuando lo ve, el impacto llega de la mano de la abominable ira que se acumula en el rictus del chico.
+    </p>
+
+    <p>
+      —¿Quieres saber de qué se trata, <em>Ivy</em>?
+    </p>
+
+    <p>
+      El calor estival, la falta de luz y el aire viciado la <span class="marean-rotado">marean</span>, pero no se trata de lo
+      más desquiciante de la noche, porque sabe que algo se esconde tras Erik y está a punto de descubrirlo:
+    </p>
+
+    <p>
+      —Resulta que a mí siempre me ha gustado satisfacer mis caprichos, ¿sabes? Si quiero algo, <em>no me rindo</em> hasta que lo consigo.
+      Por eso, cuando me dieron a conocer la plataforma <span style="color:#e6e64c;">Severance</span>,
+      se volvió para mí una idea obsesiva. Y con los contactos adecuados, la realidad perfecta.
+    </p>
+
+    <p>
+      Erik se mueve por el rellano de los áticos como si fuera una <span style="color:#331254;" class="outline-text">pantera</span>.
+      Es un reclamo visual que hace que Terry no pueda apartar sus ojos de él, aunque esté aterrada por el punto al que quiere llegar.
+      Eso era acerca de los mensajes de los clientes que aparecían al principio en su teléfono clonado. Acerca de los propios clientes que la
+      reclamaban, a los que le habían prohibido responder hasta que «<em>estuviera lista</em>».
+    </p>
+
+    <p class="centered"><em>¿Lista para qué?</em></p>
+
+    <p>
+      Erik le está sonriendo como si nada pasase. Parece albergar dentro de él unas energías que entrechocan y de ese modo todo lo medido
+      en su actitud se desmorona cuando se inclina hacia Terry en un ademán confidente.
+    </p>
+
+    <p>
+      —Si no fuera por <span style="color:#e6e64c;">Severance</span>, creo que no habría descubierto que eres una
+      <a href="farsante.html" class="choice-link">farsante</a>, <em>Terry</em>.
+    </p>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">Inventario</button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="../javascript/inventory.js"></script>
+  <script src="../javascript/rumoruno.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>

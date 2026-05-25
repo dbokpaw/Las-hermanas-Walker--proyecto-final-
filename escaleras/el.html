@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Él</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="scene-body" data-tags="escaleras">
+  <main class="scene-wrap text-outline">
+    <p class="emboss-buoy red-dark-text">
+      Terry cae al suelo frente a ti como si hubiera sido afectada por la cámara lenta. Sus enormes ojos todavía están abiertos.
+      Una mancha de sangre empieza a devorar su camisa, a la altura del pecho.
+      <br /><br />
+      Sientes la inercia y el cuchillo que ha temblado en tus manos tras asestar un corte profundo, como si hubieras querido comprobar
+      cuánto podía hundirse en su torso.
+      <br /><br />
+      Tú mismo te sientes ingrávido, como si el suelo bajo tus pies hubiese desaparecido. Te mueves hacia ella. No hace nada. Está estática.
+      En su rostro, que va marchitándose poco a poco, detectas lo último que siente: confusión, incredulidad, horror.
+      <br /><br />
+      Cuando la noche cubre sus ojos, te das cuenta de que has acabado con tu única oportunidad.
+    </p>
+
+    <div class="centered fin-block">
+      <p id="fin-l-1" class="hidden fade-line fin-letter">F</p>
+      <p id="fin-l-2" class="hidden fade-line fin-letter">I</p>
+      <p id="fin-l-3" class="hidden fade-line fin-letter">N</p>
+      <p id="fin-question" class="hidden fade-line fin-question">?</p>
+    </div>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">Inventario</button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="../javascript/inventory.js"></script>
+  <script src="../javascript/el.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>

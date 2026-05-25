@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Folio arrugado - Un mensaje críptico</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="scene-body">
+  <main class="scene-wrap grey-text">
+    <div class="centered">
+      <img
+        src="./img/folio_arrugado.webp"
+        alt="Folio de papel amarillento y arrugado, con manchas de humedad y bordes desgastados. En él se lee un mensaje escrito a mano: '¿Quién eres realmente?'. La caligrafía es temblorosa, como si hubiera sido escrita con prisa o bajo presión."
+        width="500"
+        class="scene-image"
+        loading="lazy"
+        srcset="
+          ./img/folio_arrugado-400.webp 400w,
+          ./img/folio_arrugado.webp 800w
+        "
+        sizes="
+          (max-width: 600px) 400px,
+          500px
+        "
+      />
+    </div>
+
+    <p>
+      Te llamas a ti mismo —<span class="strike">¿al de entonces? ¿al de ahora?</span>— imbécil.
+      ¿Por qué no especificaste a qué te referías? Sueltas un suspiro.
+      Vaya forma de jugar con tu tiempo.
+      Lo que haces esta vez es mirar en la <a href="cartera.html" class="choice-link">cartera</a>.
+    </p>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">
+    Inventario
+  </button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="./javascript/inventory.js"></script>
+  <script src="./javascript/folioarrugado.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>

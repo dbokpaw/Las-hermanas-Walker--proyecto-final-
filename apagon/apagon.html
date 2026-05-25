@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apagón</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="scene-body" data-tags="apagon">
+  <main class="scene-wrap grey-text">
+    <p><em>Jueves 21 de julio.</em></p>
+
+    <p>
+      Las semanas pasan en el edificio con un devenir ansioso para la artista.
+      Ensayar un guion cinematográfico con un reparto coral no es sencillo. La mesa en la lectura de guion se llena
+      de interrupciones, personas cuyos brazos se disparan para sacar a relucir apuntes que no aportan nada en absoluto
+      y lo único que levantan es la incomodidad de los presentes y el hastío por mantenerse allí sentados alrededor de seis horas.
+    </p>
+
+    <p>
+      Cuando no hay ningún avance, Terry suele practicar el guion en casa, en la habitación insonorizada para que ningún detalle
+      del manuscrito pueda ser filtrado. Así ha sido su costumbre desde que remudó a su hermana.
+    </p>
+
+    <p>
+      No obstante, parece que, en esta ocasión, no le será posible centrarse por entero en el monólogo que debe aprenderse
+      para la sesión del día siguiente. En él, debe declarar a su mejor amigo que es el único que le queda después de su periplo siendo…
+      <span id="cabrona-line" class="hidden fade-line">Una cabrona de cuidado.</span>
+    </p>
+
+    <p>
+      «<em>¿Por qué no me sale?</em>», desespera Terry mientras baja las escaleras con movimientos bruscos, saltos ridículos por cada escalón
+      que dejan ver su enojo. «<em>Suerte</em>, pensó, <em>que no hay nadie por aquí para ver la rabieta que llevo encima</em>.»
+      Y, sin embargo, se equivoca. Es a Hyuk, el vecino fanático de su hermana, a quien ve en el rellano, víctima posible de su necesidad
+      más inmediata, pero su pensamiento previo se disipa para dar lugar a una ocurrencia.
+    </p>
+
+    <p>
+      —¡Hyuk, Hyuk! ¿Puedo molestarte un momento?<br />
+      —Oh, Ivy, ¡hola! —El muchacho le ofrece el asomo de una sonrisa, truncada por la preocupación que se muestra en su cejo fruncido.
+      En la mano lleva la linterna del móvil encendida y un par de linternas extra bajo el brazo— ¿No te han pillado los
+      <a href="apagondos.html" class="choice-link">apagones</a> <span class="blink-text">intermitentes</span>?
+    </p>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">
+    Inventario
+  </button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="../javascript/inventory.js"></script>
+  <script src="../javascript/apagon.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>

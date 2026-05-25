@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notificación - El móvil de Ivy Walker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="scene-body">
+  <main class="scene-wrap grey-text">
+    <div class="centered">
+      <img
+        src="./img/movil02.jpg"
+        alt="Pantalla del móvil de Ivy Walker mostrando notificaciones. Se ven varios tweets en su feed, incluyendo un comentario de un usuario llamado 'San'. Abajo aparece la notificación de que 'Ash' ha dado like a un tweet. La pantalla tiene un brillo tenue característico de la noche."
+        class="scene-image"
+        loading="lazy"
+        width="100%"
+        height="auto"
+      />
+    </div>
+
+    <p>
+      Acaba de entrar una última notificación. Son comentarios continuos de Twitter, de la que fue su
+      última publicación. Llevas obsesionado con esto mucho tiempo… Tanto, que empiezas a atar cabos
+      en tu mente. Estás seguro de que hay algo extraño en lo que lees.
+    </p>
+
+    <p>
+      Empezaste teorizando sobre ese mensaje del tal <span class="black-text">San</span>.
+      Cuando lo hilaste al tweet de Ivy, al que <span class="black-text">Ash</span> le dio
+      <span class="red-text">me gusta</span>, temiste lo peor…
+    </p>
+
+    <p>
+      Pero todo alcanzó un <span class="nuevo-nivel">nuevo nivel</span> cuando llegaste a
+      <a href="reddit.html" class="choice-link">aquella web</a>.
+    </p>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">
+    Inventario
+  </button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="./javascript/inventory.js"></script>
+  <script src="./javascript/notificacion.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>

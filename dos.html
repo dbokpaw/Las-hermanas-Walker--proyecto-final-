@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="scene-body">
+  <main class="scene-wrap grey-text">
+    <p id="d1" class="hidden ring ring-blurrier">Ring...</p>
+    <p id="d2" class="hidden ring ring-blur">Ring...</p>
+    <p id="d3" class="hidden ring">Ring...</p>
+
+    <section id="d4" class="hidden fade-line">
+      <p>
+        Cuando desbloqueas el teléfono, te percatas de que te está llamando
+        <span class="pink-text">Nana</span>, la presidenta y dueña de la corporación EDNA.
+        Aunque con vaguedad, recuerdas haber hecho alguna visita con sus vendedores y haber descubierto
+        las ventajas de vivir en una de las urbanizaciones mejor valoradas de todo Gangnam.
+      </p>
+
+      <p>
+        Sí. Nana ha visto crecer la comunidad gracias a las raíces echadas por el negocio familiar
+        cuando su padre aún mandaba durante la construcción de Hoshigo. Años más tarde, relegó en ella
+        el cargo de velar por la armonía y vecindad, por un futuro fructífero para la empresa.
+        <span class="red-text">Hoshigo</span>, a donde piensas mudarte, no son las únicas viviendas a su nombre,
+        pero sí sus favoritas, y por eso reside allí con Victoria, su prima.
+      </p>
+
+      <p>
+        Es ella quien toma todas las decisiones, la casera a la que ingresarás el alquiler mensual y la
+        encargada de ayudar con cualquier inconveniente ocurrido de la infraestructura.
+      </p>
+
+      <p>
+        Cuando lo coges, suena su voz, tan clara y despierta que no puedes creer que te esté llamando en la madrugada...
+        O no... Espera. Son las siete de la mañana.
+      </p>
+
+      <p>
+        <span class="pink-text">NANA</span>.— ¡Hola, hola, nuevo inquilino! Todo lo que nos enviaste está en perfecto orden.
+        Queríamos notificarte que en Hoshigo los últimos domingos de cada mes hacemos una reunión vecinal
+        (en los jardines si hace buen tiempo o en el rellano si la noche no lo permite) para proponer ideas o manifestar
+        quejas, así como necesidades, y también para poder nombrar al Vecino del Mes. Estas reuniones dan comienzo a las 20:00,
+        que sabemos que los lunes muchos de nuestros vecinos tienen que madrugar. Tu llegada tendrá lugar
+        <em>el último domingo del presente mes</em>, ¡así que queríamos avisarte con tiempo!
+        <br />
+        <span class="black-text">TÚ</span>.— Huh... Está bien. Gracias.
+        <br />
+        <span class="pink-text">NANA</span>.— ¡No es nada, vecino! Esperamos que lleguéis tú y tus cosas sanas y salvas. ¡Hasta pronto!
+      </p>
+
+      <p>
+        Gracias a Dios, Nana cuelga primero.
+        Agotado, te deslizas hasta la cama, para <a href="tres.html" class="choice-link">dormir</a> de una vez por todas.
+      </p>
+    </section>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">
+    Inventario
+  </button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="./javascript/inventory.js"></script>
+  <script src="./javascript/dos.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>

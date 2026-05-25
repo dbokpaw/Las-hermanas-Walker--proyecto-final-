@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apagón Cuatro A</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="scene-body" data-tags="final">
+  <main class="scene-wrap" style="color: white !important;">
+    <p>
+      Su cuerpo lucha contra el impulso de girarse, porque reconoce la voz. Es <em>Erik</em> quien habla con
+      <span style="color:blue;">Terry</span>. Ha de admitir que no le hace especial gracia, pero no es un mal tío.
+      Al menos se porta con Hyuk, quien se tiene ganada a Terry.
+    </p>
+
+    <p>
+      El fanático mira a su amigo y compañero de piso, aunque la cantante no puede verlo con claridad, sabe que el muchacho
+      es todo nerviosismo, y la inquietud que pueda causarle el apagón se la van a quitar ellos de un plumazo.
+    </p>
+
+    <p>—Venga, vamos.</p>
+
+    <p>
+      Cargados con sus linternas, los dos jóvenes se alejan del grupo y comienzan a subir las escaleras de camino al ático A,
+      allí donde se aloja <span class="pink-text">Nana</span>, la dueña del edificio.
+    </p>
+
+    <p>
+      —Es increíble lo solícita que eres siempre, eh, <em>Ivy</em>. Incluso con lo ocupada que es tu vida.
+      —El chico habla con esa sonrisa suya que parece anunciar que sabe un secreto que nadie más conoce.
+    </p>
+
+    <p>
+      «<em>¿Qué coño respondo a eso?</em>», piensa la neoyorkina cuando sube el último escalón.
+      Le regala una sonrisa tensa, indispuesta. Su cara debe evidenciar esto porque el chico, añade:
+    </p>
+
+    <p>
+      —Uno empieza a pensar que estás hecha para hacer de todo.
+      —Erik se adelanta para ponerse en el camino de Walker—
+      Esto no tendrá que ver con los rumores, ¿eh, Ivy? Ya sabes, para distraerte.
+    </p>
+
+    <p>
+      La cara de Terry cambia por completo. Las comisuras de sus labios caen y su ceño se frunce levemente.
+      La forma en la que pronuncia el nombre de su hermana se le hace tan raro... No parece que sus palabras
+      hayan sido escogidas al azar.
+    </p>
+
+    <p>—¿Rumores?</p>
+
+    <p>¿Qué rumor quieres que Terry escuche?</p>
+    <p class="choices-line">
+      <a href="rumoruno.html" class="choice-link">Ese rumor.</a><br />
+      <a href="rumordos.html" class="choice-link">Aquel rumor.</a>
+    </p>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">
+    Inventario
+  </button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="../javascript/inventory.js"></script>
+  <script src="../javascript/apagoncuatroa.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>

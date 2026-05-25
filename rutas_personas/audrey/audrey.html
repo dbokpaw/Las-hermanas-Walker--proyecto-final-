@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Audrey</title>
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body class="scene-body">
+  <main class="scene-wrap grey-text">
+    <p>
+      —<span class="blur-text">Terry...</span> —Gracias a todos los dioses solo ella puede oírlo—
+      No puedes ser tú...
+    </p>
+
+    <p>
+      La voz nace tras ella, por eso Terry se vuelve lentamente. Por eso y porque cree haber reconocido
+      la voz de alguien... La voz de <span class="blurrier-text">Audrey</span>. Ah... Tiene el nombre
+      en la punta de la lengua, pero hay algo dentro de sí que desea fervientemente bloquear todo recuerdo
+      de aquella chica.
+    </p>
+
+    <p>¿Podría ser...?</p>
+
+    <p>
+      La mirada de soslayo recae sutilmente sobre <span class="blur-text">Audrey</span>. Han sido meses
+      de arduo trabajo y, si algo ha podido sacar de la escuela de actuación, es el disimulo.
+    </p>
+
+    <p>
+      Pero Terry sigue siendo Terry, así que fracasa miserablemente y su mirada acaba resultando intensa,
+      como si <span class="smear-text">irradiase</span> una luz propia.
+    </p>
+
+    <p>
+      —Hola. —Se arma de valor para poder entonar el saludo con la habitual elegancia y cordialidad de su hermana.
+      Entreabre los labios para pronunciar palabra, pero no emerge vocablo alguno.
+    </p>
+
+    <p>Solo los segundos ejercen de conciliador amigo.</p>
+
+    <p>—Soy <em>Ivy</em>…, ¿y tú?</p>
+
+    <p>
+      Es cuando su expresión se crispa de puro desconcierto cuando Terry es capaz de darle forma clara a su nombre:
+      <span style="color:#9a1919;">Audrey</span>. No hace falta que se lo diga, pero la evocación de esas seis letras
+      le provoca un escalofrío al devolverla a la primera noche en la que se lo dijo al oído. Había sido en una situación
+      muy diferente, cuando ella todavía se hacía llamar Terry y tenía libertad suficiente como para conocer y pasar la noche
+      con chicas como Audrey. Solo que no hay más chicas como ella.
+    </p>
+
+    <p>
+      Audrey había sido la única chica en
+      <span class="romper-rotado">
+        romperle el <span style="color:#8a1414;"><span class="cor-rotado">cor</span>a<span class="zon-rotado">zón</span></span>
+      </span>.
+    </p>
+
+    <p>—Soy Audrey...</p>
+
+    <p>
+      A medida que la distancia es apurada por su cuerpo, lamenta haberse acercado. Tuvo en alta estima su valor
+      y sus capacidades; ninguna de las dos resulta en especial sobresaliente ahora y resulta delator el compromiso
+      en el que se ha inmerso.
+    </p>
+
+    <p>
+      —Es un gran placer. ¿Llevas mucho tiempo por aquí?
+    </p>
+
+    <p>
+      Escruta los ojos de la chica y encuentra en su profundidad la misma nocturnidad que en tiempos pasados arroparon juntas.
+      Sí. Está más segura que nunca que se trata de ella. De la chica que la hirió profundamente tras haberle dado a conocer la
+      felicidad en una noche.
+    </p>
+
+    <p>
+      Todos sus sentimientos quedan soterrados bajo su sonrisa
+      <a href="audreydos.html" class="choice-link">ferozmente alentadora</a>.
+    </p>
+
+    <div class="centered top-gap">
+      <img
+        src="../../img/encuentroconaudrey.png"
+        alt="Foto antigua de Audrey con un tachón sobre su rostro."
+        class="scene-image"
+        loading="lazy"
+        srcset="
+          ../../img/encuentroconaudrey-400.webp 400w,
+          ../../img/encuentroconaudrey-800.webp 800w,
+          ../../img/encuentroconaudrey.webp 1200w
+        "
+        sizes="
+          (max-width: 600px) 400px,
+          (max-width: 1200px) 800px,
+          1200px
+        "
+      />
+    </div>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">
+    Inventario
+  </button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="../../javascript/inventory.js"></script>
+  <script src="../../javascript/audrey.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>

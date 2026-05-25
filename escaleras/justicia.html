@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Justicia</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="scene-body" data-tags="escaleras">
+  <main class="scene-wrap text-outline">
+    <p>
+      Terry <span class="condense-text">aprieta</span> los dientes. Erik sabe que percibe en su expresión,
+      en la caricia de sus dedos contra su rostro, que guarda una violencia inusitada para ella.
+    </p>
+
+    <p>
+      —No debiste sustituirla. Al principio pensé que simplemente nos estabas estafando por tu cuenta, pero cuando vi que
+      la empresa D.R.E.A.M. te promocionaba, te traía gente para tus cosas, que has seguido rodando películas...
+      Supe que esto es más grande que la jeta de una arribista.
+    </p>
+
+    <p>
+      Terry aparta la vista. Antes no le hubiera importado que la llamasen de todo, ni que le reconozcan la cruda verdad,
+      pero ahora se siente tan molesta y atemorizada que no controla lo que siente con cada arremetida. Le molesta porque sabe que es cierto.
+      Hoy más que nunca sus pensamientos son demasiado <span class="shudder">ruidosos</span>.
+    </p>
+
+    <p>
+      —Lo único que quiero es que me digas dónde está Ivy. La verdadera Ivy.<br />
+      —No lo sé.
+    </p>
+
+    <p>
+      Terry es sincera en su respuesta. En los últimos años no ha sabido sobre su hermana más de lo que aquella hubiera querido:
+      eran las fotos promocionales, los tweets virales y las habladurías lo que la ayudaban a localizarla; pero, incluso así se le escapaba tanto de ella...
+      Ivy siempre ha sido escurridiza.
+    </p>
+
+    <p>
+      —No me vaciles, Walker. Si alguien sabe dónde está tiene que ser su hermanita querida.
+      —La mano del chico sale disparada al brazo de Terry, quien trata de zafarse—
+      Dame tu móvil. El <em>tuyo</em>.
+    </p>
+
+    <p>
+      La muchacha siente unas ganas aberrantes de insultarlo. De matarlo ahí mismo. Siente la carencia del entrenamiento de boxeo
+      que solía hacer cuando vivía en el extrarradio de la ciudad, cuando aún era una <em>factotum</em> que hacía de todo por un par de billetes.
+    </p>
+
+    <p>
+      —El mío es el clonado de Ivy. No tengo ningún otro.<br />
+      —Si no me vas a ayudar por las buenas, creo que tendré que convencerte de otra manera.
+    </p>
+
+    <p>
+      Erik parece de los que están dispuestos a atacar sin dudas si Terry intentase algo. De los vecinos, es el que peor mala espina le da.
+      El que más letal podría ser, también. Se pregunta, en este instante, si estaría dispuesto a matarla con tal de recuperar a Ivy.
+    </p>
+
+    <p>Una Ivy que podría seguir viviendo.<br />O no.</p>
+
+    <p>
+      En este instante, necesita que Audrey, Conan o incluso cualquiera de los otros vecinos la sostenga y le haga sentir que va a salir de esta.
+      Pero cuando Erik saca una navaja de afilado bisel, el corazón le da un brinco en el pecho antes de latir bronco.
+    </p>
+
+    <p>
+      Ni siquiera le da tiempo a gritar antes de que Erik se abalance sobre
+      <a href="muerte.html" class="choice-link">ella</a>.
+    </p>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">Inventario</button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="../javascript/inventory.js"></script>
+  <script src="../javascript/justicia.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>

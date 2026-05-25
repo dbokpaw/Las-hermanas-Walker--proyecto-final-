@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farsante</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="scene-body" data-tags="final">
+  <main class="scene-wrap" style="color: white !important;">
+    <p>—No me jodas. —musita ella.</p>
+
+    <p>
+      Erik se echa a reír. Una risa ansiosa y abundante.
+    </p>
+
+    <p>
+      —Esa es una de las primeras cosas que me hizo darme cuenta de que tú no eres <em>mi</em> Ivy.
+      No hablas igual que ella. No hueles igual que ella. No tienes su misma mirada, ni su tacto...
+      No sé cómo alguien podría confundiros.
+    </p>
+
+    <p class="centered">Ivy Walker es su vida entera.</p>
+
+    <p>
+      A Terry se le descompone el rostro. Mira por encima de su hombro, hacia las escaleras.
+    </p>
+
+    <p>
+      —Claro que otra cosa fue cómo no me reconociste. Después de cuánto pagué por el tiempo de tu hermana.
+      Después de todo lo que pasamos juntos <span class="gracias-rotado">gracias a</span>
+      <span style="color:#e6e64c;"><em>Severance</em></span>.
+      —Erik la mira con la cabeza <span class="ladeada-rotado">ladeada</span> y su mano se cierra en torno a la muñeca de la chica—
+      Soy capaz de distinguiros incluso por vuestra piel, por haber disfrutado de leer toda la de Ivy.
+      De haberla probado por completo.
+    </p>
+
+    <p>
+      Una actriz debe intentar por todos los medios salir adelante. Ivy descubrió esta cruda realidad en su camino al estrellato.
+      Su agente la incluyó en una red en la que actores y actrices jóvenes sirven de juguetes para personas más poderosas
+      que pueden contratarlos en calidad de actores para... satisfacer sus deseos. Y Erik era parte de la clientela.
+    </p>
+
+    <p>
+      —Cuando le dije a Hyuk que no tú no eras Ivy, se rio en mi cara. ¿Te lo puedes creer?
+      Él, que se las da del mayor fan de tu hermana.
+      —La presión en torno a su muñeca aumenta, lo que arranca un gemido de dolor de Terry.
+      <br />
+      —Suéltame, hijo de la grandísima...
+      <br />
+      —¡Ah! ¡¿Ves?! ¡Das puta pena, no sonríes como Ivy, no tienes su brillo, no estás a su altura!
+    </p>
+
+    <p>
+      Erik empieza a reír con frenesí. Terry reconoce la misma brusquedad que tenían todos los del mundillo
+      en el que se manejaba antes de firmar el contrato. Las mismas expresiones que al principio la intimidaban
+      por su matiz arisco. La certeza con la que habla la deja helada en el sitio mientras Erik gesticula.
+    </p>
+
+    <p>
+      —¿Y qué coño quieres de mí? ¿Que lo reconozca? ¡Pues sí, puto gilipollas!
+      <br />
+      —Eso no lo necesito, Terry. —responde con burla en la voz.
+      Los dedos del joven rozan su mentón de la misma manera que lo hubo hecho en el pasado con su hermana;
+      acaricia su mejilla, la misma cara que había contemplado una y otra vez como producto por el que había pagado—
+      Quiero hacer <a href="../escaleras/justicia.html" class="choice-link">justicia</a>.
+    </p>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">Inventario</button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="../javascript/inventory.js"></script>
+  <script src="../javascript/farsante.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>

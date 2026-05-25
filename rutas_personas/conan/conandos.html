@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conan Dos</title>
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body class="scene-body">
+  <main class="scene-wrap grey-text">
+    <p>
+      ¿Cómo era posible que en diez meses no hubiera tenido constancia de aquel bebé que ahora descansaba en el regazo
+      de un desconocido? El reproche que emergía del tono de su voz logra cierto malestar en ella y se percata de que
+      no reside por entero en ella la culpa. Todo un trimestre había pasado hasta que ella ocupó el lugar de su hermana.
+    </p>
+
+    <p>
+      —Soy yo... <span class="orange-text">Conan Hart</span>. ¿No te acuerdas de mí? ¿Dónde te habías metido?
+    </p>
+
+    <p>
+      En un momento de lúgubre clarividencia, como el fogonazo de un
+      <span class="black-text"><span class="blink-text">relámpago negro</span></span>,
+      comprende que no se trata de ningún fanático atolondrado y aislado de la realidad, siquiera ilusiones propias,
+      fantasías creadas por la extenuación. Este hombre habla con honestidad.
+    </p>
+
+    <p>
+      —Yo... —Baja la vista para detenerla sobre el bebé. Tan extraña se siente al ver en sus facciones algo de su hermana,
+      algo de ella misma... No cabe duda. <span style="color:#66d9e8;"><em>Es de Ivy</em></span>— Lo siento. De verdad...
+    </p>
+
+    <p>¿Qué hace Terry en este momento?</p>
+
+    <p class="choices-line">
+      <a href="conantres.html" class="choice-link">Mentir y hacerle creer que es Ivy</a>
+      <span> | </span>
+      <a href="conancuatro.html" class="choice-link">Decirle su verdadera identidad</a>
+      <span> | </span>
+      <a href="conancinco.html" class="choice-link">Huir</a>
+    </p>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">
+    Inventario
+  </button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="../../javascript/inventory.js"></script>
+  <script src="../../javascript/conandos.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>

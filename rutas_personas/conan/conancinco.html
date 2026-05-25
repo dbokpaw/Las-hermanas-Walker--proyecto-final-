@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conan Cinco</title>
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body class="scene-body">
+  <main class="scene-wrap grey-text">
+    <p id="dot1" class="hidden fade-line">.</p>
+    <p id="dot2" class="hidden fade-line">.</p>
+    <p id="dot3" class="hidden fade-line">.</p>
+
+    <section id="c5-block-1" class="hidden fade-line">
+      <p>
+        «<em>No tengo tiempo para estas gilipolleces</em>», es el primer pensamiento que cruza la mente de Terry.
+        Todo el cuerpo se le enfría de pronto antes de que comienze a arderle por la irritación que se transforma
+        en <em>mala leche</em>, en un enfado que se extiende por las venas con cada nuevo
+        <span style="color:#990f0f;" class="blink-text">latido</span>.
+      </p>
+
+      <p>
+        De hecho, se siente estúpida por pedir perdon. <em>¿Disculparse, por qué?</em> Coño, ella no ha hecho <em>nada</em>.
+        Ya lleva unos pocos meses lidiando con la vida de su hermana y creía poder soportar a la prensa, una relación por
+        conveniencia e incluso que algún fan <span class="loco-rotado">loco de remate</span> le tocase los ovarios a dos manos,
+        pero, <span style="color:#ba1c1c;">¿esto?</span>
+      </p>
+
+      <p>No tiene por qué pasar por esto si no le da la gana.</p>
+    </section>
+
+    <p id="c5-quote" class="hidden fade-line centered"><em>A tomar por culo.</em></p>
+
+    <section id="c5-block-2" class="hidden fade-line">
+      <p>—Tengo que irme.</p>
+
+      <p>
+        No quiere escuchar más. No puede.
+        <span class="black-text">Empieza a preguntarse qué otras cosas le escondía Ivy. Empieza a preguntarse cuánto sabía en realidad sobre su hermana...</span>
+        Algo dentro de sí le grita que salga de allí.
+      </p>
+
+      <p>
+        Y ella, en este instante, se da la vuelta para <a href="apagon.html" class="choice-link">obedecer</a>.
+      </p>
+    </section>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">
+    Inventario
+  </button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="../../javascript/inventory.js"></script>
+  <script src="../../javascript/conancinco.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>

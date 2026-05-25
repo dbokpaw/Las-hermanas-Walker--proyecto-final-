@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Primer cajón - El teléfono de Ivy Walker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="scene-body">
+  <main class="scene-wrap grey-text">
+    <p>
+      Con la llave que es necesaria para abrir el cajón, consigues desbloquearlo.
+      Cuando lo abres, el corazón empieza a <span class="shudder">latir bronco en tu pecho</span>.
+      Es como si estuviera a punto de saltar de tu garganta.
+    </p>
+
+    <p>
+      Te llevas la mano al estómago y miras a ambos lados, como si alguien fuera a entrar en tu habitación.
+      No quieres que nadie sepa tu secreto. No quieres que nadie sepa el tesoro que escondes con recelo.
+    </p>
+
+    <p>
+      Vuelves a ojear el interior del cajón y brota de pronto una risita maníaca.
+      Joder. Te sientes pletórico y a la vez, acojonado.
+      Eres la única persona del mundo que podría entender la magnitud de lo que tienes entre manos.
+    </p>
+
+    <p>En el cajón descansa el teléfono móvil de Ivy Walker.</p>
+    <p id="p2" class="hidden fade-line">El <em><strong>teléfono</strong></em> de Ivy Walker.</p>
+    <p id="p3" class="hidden fade-line">Ivy Walker. <span class="expand-text ivy-name"><em><strong>Tu ídolo</strong></em></span></p>
+    <p id="p4" class="hidden fade-line rumble">Joder… No te lo puedes creer.</p>
+
+    <div class="centered top-gap">
+      <a href="notificacion.html">
+        <img
+          src="./img/movil01.jpg"
+          alt="Teléfono móvil de Ivy Walker. La pantalla muestra a las dos hermanas gemelas."
+          class="scene-image"
+          loading="lazy"
+          width="100%"
+          height="auto"
+        />
+      </a>
+    </div>
+
+    <p>Cuando vas a tocar el móvil, aparecen unas notificaciones. <sup class="condensed">(Haz click en el móvil.)</sup></p>
+  </main>
+
+<button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">
+  Inventario
+</button>
+
+<aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+  <div class="inventory-header">
+    <h2>Inventario</h2>
+    <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+  </div>
+
+  <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+    <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+    <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+    <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+  </div>
+
+  <div class="inventory-layout">
+    <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+
+    <article class="inventory-detail">
+      <div class="detail-art" id="item-art">?</div>
+      <p id="item-badge" class="item-badge">Categoría</p>
+      <h3 id="item-title">Selecciona un elemento</h3>
+      <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+      <p id="item-text">Aquí aparecerá la descripción.</p>
+    </article>
+  </div>
+</aside>
+
+  <script src="./javascript/inventory.js"></script>
+  <script src="./javascript/primercajon.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>

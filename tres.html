@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tres</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="scene-body" data-tags="video">
+  <main class="scene-wrap grey-text">
+    <p>
+      Siempre te has tenido por una persona con un <span class="gold-text">don</span> único.
+      Es en el sueño cuando se te revelan grandes cosas, y esta noche sucede la mayor de todas…
+    </p>
+
+    <div class="centered">
+      <video
+        class="scene-video"
+        controls
+        playsinline
+        preload="none"
+        poster="./img/copycat-preview.webp"
+        loading="lazy"
+        width="100%"
+        height="auto"
+      >
+        <!-- Formato prioritario: WebM (mejor compresión) -->
+        <source src="./img/copycat.webm" type="video/webm" />
+        
+        <!-- Formato universal: MP4 (fallback) -->
+        <source src="./img/copycat.mp4" type="video/mp4" />
+        
+        <!-- Mensaje de fallback -->
+        Tu navegador no soporta la reproducción de vídeos.
+      </video>
+    </div>
+
+    <p>
+      Sueñas con ella...<br />
+      <span class="blur-text">Terry se apodera</span><br />
+      <span class="blurrier-text">de tu conciencia...</span>
+    </p>
+
+    <section class="centered dream-block">
+      <p class="dream-white">
+        ¿Dónde está Ivy?, preguntas a Terry.
+      </p>
+      <p class="dream-white">
+        𝐈𝐕𝐘 𝐓̶𝐄̶𝐑̶𝐑̶𝐘̶ 𝐖𝐀𝐋𝐊𝐄𝐑 ::<br />
+        ﹫4𝘙𝘔𝘌𝘋𝘔4𝘕𝘐4𝘊 ،<br />
+        ( i do <strong>not know</strong>. am i my )<br />
+        SISTERS KEEPER ? ; ꜆꜄
+      </p>
+      <p>
+        ↻ ◃◁ <a href="cuatro.html" class="choice-link">II</a> ▷▹ ⇀
+      </p>
+    </section>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">
+    Inventario
+  </button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="./javascript/inventory.js"></script>
+  <script src="./javascript/tres.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>

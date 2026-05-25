@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Podcast - El caso Ivy Walker</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #e5decc;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    /* Layout principal con tres columnas */
+    .main-layout {
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    /* Aside izquierdo y derecho */
+    .aside {
+      flex: 0.25;
+      min-width: 180px;
+      background: rgba(174, 55, 49, 0.05);
+      border-radius: 20px;
+      padding: 20px;
+      backdrop-filter: blur(5px);
+    }
+
+    .aside-title {
+      color: #ae3731;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #ae3731;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .podcast-list {
+      list-style: none;
+    }
+
+    .podcast-item {
+      background: white;
+      margin-bottom: 15px;
+      padding: 12px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid #ae3731;
+      text-align: center;
+    }
+
+    .podcast-item:hover {
+      transform: translateX(5px);
+      background: #ae3731;
+      color: white;
+      box-shadow: 0 5px 15px rgba(174, 55, 49, 0.3);
+    }
+
+    .podcast-name {
+      font-weight: bold;
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+    }
+
+    .podcast-episode {
+      font-size: 0.7rem;
+      color: #ae3731;
+    }
+
+    .podcast-item:hover .podcast-episode {
+      color: #e5decc;
+    }
+
+    .trending-badge {
+      display: inline-block;
+      background: #ae3731;
+      color: white;
+      font-size: 0.6rem;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-top: 5px;
+    }
+
+    .podcast-item:hover .trending-badge {
+      background: white;
+      color: #ae3731;
+    }
+
+    /* Contenedor central */
+    .podcast-container {
+      flex: 1.5;
+      background: #e5decc;
+      border-radius: 20px;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #ae3731;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 10px;
+      letter-spacing: -1px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #ae3731;
+      opacity: 0.8;
+      margin-bottom: 40px;
+      font-style: italic;
+    }
+
+    .divider {
+      height: 3px;
+      background: #ae3731;
+      width: 80px;
+      margin: 20px auto;
+      border-radius: 3px;
+    }
+
+    /* Layout de dos columnas dentro del contenedor */
+    .two-columns {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .player-column {
+      flex: 1.2;
+      min-width: 280px;
+    }
+
+    .book-column {
+      flex: 0.8;
+      min-width: 250px;
+    }
+
+    /* Reproductor */
+    .player-card {
+      background: #ae3731;
+      border-radius: 24px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(174, 55, 49, 0.3);
+    }
+
+    .player-image {
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 300px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .player-image:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .player-label {
+      color: #e5decc;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    .player-label strong {
+      font-size: 1.1rem;
+    }
+
+    .audio-status {
+      color: #e5decc;
+      margin-top: 15px;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .audio-status.playing {
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+
+    /* Tarjeta del libro */
+    .book-card {
+      background: white;
+      border-radius: 20px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      border: 1px solid #ae3731;
+    }
+
+    .book-cover {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+    }
+
+    .book-title {
+      color: #ae3731;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .book-author {
+      color: #666;
+      font-size: 0.8rem;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .book-price {
+      color: #ae3731;
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    .buy-button {
+      background: #ae3731;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1rem;
+      border-radius: 40px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      width: 100%;
+      font-family: inherit;
+    }
+
+    .buy-button:hover {
+      background: #8a2c27;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(174, 55, 49, 0.4);
+    }
+
+    .buy-button:active {
+      transform: translateY(0);
+    }
+
+    .demo-note {
+      font-size: 0.7rem;
+      color: #999;
+      margin-top: 15px;
+      font-style: italic;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #ae3731;
+      color: #ae3731;
+      font-size: 0.8rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .main-layout {
+        flex-direction: column;
+      }
+      
+      .aside {
+        width: 100%;
+      }
+      
+      .podcast-container {
+        padding: 20px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      .two-columns {
+        flex-direction: column;
+      }
+      
+      .player-card {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-layout">
+    <!-- ASIDE IZQUIERDO - Podcasts destacados -->
+    <aside class="aside">
+      <div class="aside-title">DESTACADOS</div>
+      <ul class="podcast-list">
+        <li class="podcast-item">
+          <div class="podcast-name">MISTERIOS RESUELTOS</div>
+          <div class="podcast-episode">Ep. 34 - El caso Walker</div>
+          <span class="trending-badge">Tendencia</span>
+        </li>
+        <li class="podcast-item">
+          <div class="podcast-name">TRUE CRIME</div>
+          <div class="podcast-episode">Ep. 89 - Ídolos caídos</div>
+        </li>
+        <li class="podcast-item">
+          <div class="podcast-name">LA NORIA DIGITAL</div>
+          <div class="podcast-episode">Ep. 12 - Severance al descubierto</div>
+          <span class="trending-badge">Nuevo</span>
+        </li>
+        <li class="podcast-item">
+          <div class="podcast-name">MENTES PERTURBADAS</div>
+          <div class="podcast-episode">Ep. 56 - Doble identidad</div>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- CONTENEDOR CENTRAL -->
+    <div class="podcast-container">
+      <h1>🎙️ PODCASTER</h1>
+      <div class="divider"></div>
+      <p class="subtitle">La plataforma para escuchar tus podcasts favoritos</p>
+
+      <div class="two-columns">
+        <!-- Columna izquierda: Reproductor -->
+        <div class="player-column">
+          <div class="player-card">
+            <img 
+              src="../img/reproductor.png" 
+              alt="Reproductor del podcast - Haz clic para escuchar"
+              class="player-image"
+              id="playPauseBtn"
+              loading="lazy"
+            />
+            <p class="player-label">
+              <strong>🎧 Episodio 7: "El caso de Ivy Walker"</strong><br>
+              Haz clic en la imagen para reproducir
+            </p>
+            <div id="audioStatus" class="audio-status">
+              ⏸️ Listo para reproducir
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna derecha: Libro -->
+        <div class="book-column">
+          <div class="book-card">
+            <img 
+              src="../img/La verdad sobre el caso Ivy Walker.png" 
+              alt="Portada del libro: La verdad sobre el caso Ivy Walker"
+              class="book-cover"
+              loading="lazy"
+            />
+            <div class="book-title">LA VERDAD SOBRE<br>EL CASO IVY WALKER</div>
+            <div class="book-author">HAN JI WOO</div>
+            <div class="book-price">24,99 €</div>
+            <button class="buy-button" id="buyBookBtn">
+              📖 COMPRAR AHORA
+            </button>
+            <p class="demo-note">
+              *Al hacer clic, serás redirigido a la tienda.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>© Página creada para la asignatura Producción de Materiales Multimedia — Sofía González Regis</p>
+      </div>
+    </div>
+
+    <!-- ASIDE DERECHO - Más podcasts -->
+    <aside class="aside">
+      <div class="aside-title">MÁS ESCUCHAS</div>
+      <ul class="podcast-list">
+        <li class="podcast-item">
+          <div class="podcast-name">EL SOTANO DEL CRIMEN</div>
+          <div class="podcast-episode">Ep. 128 - Falsas identidades</div>
+        </li>
+        <li class="podcast-item">
+          <div class="podcast-name">HISTORIAS OCULTAS</div>
+          <div class="podcast-episode">Ep. 45 - El lado B del éxito</div>
+          <span class="trending-badge">Popular</span>
+        </li>
+        <li class="podcast-item">
+          <div class="podcast-name">LA VERDAD OS HARÁ LIBRES</div>
+          <div class="podcast-episode">Ep. 23 - Ivy Walker: ¿mito o realidad?</div>
+        </li>
+        <li class="podcast-item">
+          <div class="podcast-name">CRIMEN Y FAMA</div>
+          <div class="podcast-episode">Ep. 67 - El precio de la fama</div>
+        </li>
+      </ul>
+    </aside>
+  </div>
+
+  <script>
+    // ===== REPRODUCTOR DE AUDIO =====
+    const audio = new Audio();
+    audio.src = "../audio/podcast.wav";
+    audio.loop = false;
+    audio.preload = "metadata";
+    audio.volume = 0.8;
+    
+    const playPauseBtn = document.getElementById("playPauseBtn");
+    const audioStatus = document.getElementById("audioStatus");
+    let isPlaying = false;
+    
+    audio.addEventListener("loadedmetadata", () => {
+      console.log("Audio cargado correctamente");
+    });
+    
+    playPauseBtn.addEventListener("click", () => {
+      if (isPlaying) {
+        audio.pause();
+        isPlaying = false;
+        audioStatus.innerHTML = "⏸️ Pausado";
+        audioStatus.classList.remove("playing");
+      } else {
+        audio.play().catch(error => {
+          console.log("Error al reproducir:", error);
+          audioStatus.innerHTML = "🔇 Haz clic aquí para activar el audio";
+          showManualPlayButton();
+        });
+        isPlaying = true;
+        audioStatus.innerHTML = "🎙️ Reproduciendo...";
+        audioStatus.classList.add("playing");
+      }
+    });
+    
+    audio.addEventListener("ended", () => {
+      isPlaying = false;
+      audioStatus.innerHTML = "✅ Episodio completado";
+      audioStatus.classList.remove("playing");
+      setTimeout(() => {
+        audioStatus.innerHTML = "🎧 Haz clic para volver a escuchar";
+      }, 3000);
+    });
+    
+    audio.addEventListener("error", () => {
+      audioStatus.innerHTML = "❌ Error al cargar el audio";
+      console.error("Error cargando el audio. Verifica la ruta: ../audio/podcast.wav");
+    });
+    
+    function showManualPlayButton() {
+      const existingBtn = document.getElementById("manual-play-btn");
+      if (existingBtn) return;
+      
+      const manualBtn = document.createElement("button");
+      manualBtn.id = "manual-play-btn";
+      manualBtn.innerHTML = "🔊 Activar audio manualmente";
+      manualBtn.style.cssText = `
+        background: #e5decc;
+        color: #ae3731;
+        border: 2px solid #ae3731;
+        padding: 8px 16px;
+        border-radius: 30px;
+        margin-top: 15px;
+        cursor: pointer;
+        font-family: inherit;
+        font-weight: bold;
+      `;
+      manualBtn.onclick = () => {
+        audio.play();
+        isPlaying = true;
+        audioStatus.innerHTML = "🎙️ Reproduciendo...";
+        audioStatus.classList.add("playing");
+        manualBtn.remove();
+      };
+      document.querySelector(".player-card").appendChild(manualBtn);
+    }
+    
+    // ===== BOTÓN DE COMPRA =====
+    const buyBookBtn = document.getElementById("buyBookBtn");
+    
+    buyBookBtn.addEventListener("click", () => {
+      const toast = document.createElement("div");
+      toast.innerHTML = `
+        📚 ¡Gracias por tu interés!<br>
+        <small style="font-size:12px">Redirigiendo a la tienda...</small>
+      `;
+      toast.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #ae3731;
+        color: white;
+        padding: 15px 25px;
+        border-radius: 12px;
+        z-index: 10000;
+        text-align: center;
+        animation: fadeInUp 0.3s ease;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        font-family: inherit;
+      `;
+      document.body.appendChild(toast);
+      
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translate(-50%, 20px);
+          }
+          to {
+            opacity: 1;
+            transform: translate(-50%, 0);
+          }
+        }
+      `;
+      document.head.appendChild(style);
+      
+      setTimeout(() => {
+        toast.remove();
+      }, 3000);
+    });
+  </script>
+</body>
+</html>

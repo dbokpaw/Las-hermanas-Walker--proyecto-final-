@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apagón Dos</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="scene-body" data-tags="apagon">
+  <main class="scene-wrap grey-text">
+    <p>
+      Terry se da cuenta ahora. Pues claro... Por eso el ascensor estaba fuera de servicio.
+    </p>
+
+    <p>
+      —Estamos todos aquí reunidos a ver si aclaramos algo.
+      <span class="pink-text">Nana</span> todavía no ha aparecido.
+    </p>
+
+    <p>
+      La luz se vuelve a ir. La <em>oscuridad</em> lo impregna todo hasta que los inquilinos se abren paso a hachazos de luz:
+      Youra entrega linternas, Aoi se asegura de que nadie sufra un ataque de pánico y Heizou ha propuesto ir con otros vecinos
+      a comprobar que nadie haya quedado atrapado en el ascensor.
+    </p>
+
+    <p>
+      —Seguro que ha sido alguien jugando con lo que no debía —le comenta Erik a Audrey, quien ignora dicho comentario
+      y procede a moverse por la sala para repartir más linternas.
+    </p>
+
+    <p>
+      Conan aparece en el rellano con el carrito del bebé. El paso de las semanas en el edificio ha forzado a Terry a
+      <span class="condense-text">acercarse</span> a Conan y a ejercer de la figura materna de la que hubiera carecido Aurora
+      de no estar ella.
+    </p>
+
+    <p>
+      —Mi niña. —Todavía no se ha aprendido el nombre de su sobrina. Por favor, se merece un <strong><em>guantazo</em></strong>—
+      ¿Está muy inquieta?
+    </p>
+
+    <p>
+      En el camino hasta su sobrina, se percata de una presencia <span class="double-underline-text">poderosa</span>.
+      Audrey no pasa desapercibida para ella, la saluda con gesto inquieto debido a su expresión.
+    </p>
+
+    <p>
+      Toma a Aurora entre sus brazos y empieza a mecerla con suavidad. La voz que a ella dedica es dulce y suave,
+      tonalidad especial para el bebé.
+    </p>
+
+    <p>
+      —Ya estoy aquí, cariño. Todo se va a solucionar enseguida. Vendrá <span class="pink-text">Nana</span> y se encargará de todo.<br />
+      —Supongo que a los de los pisos de arriba nos toca hacer piernas. —suelta Conan.<br />
+      —Uy, antes acampar en el rellano que subir los diez pisos otra vez.
+    </p>
+
+    <p>
+      Siente la necesidad de sacarle la lengua a Conan, de matiz juguetón, pero no sería propio de Ivy, por lo que queda
+      como un ademán tierno que rescata para sacarle una risita a Aurora. Tras este gesto, la mirada inquisitiva y punzante
+      de Audrey se detiene en ella y la niña.
+    </p>
+
+    <p>
+      Terry quiere decirle a Audrey que es la tía de la pequeña, pero se metería en un lío <span style="color:#eebd53;">inconcebible</span>,
+      así que no puede privarle de los pensamientos que debe de tener, pero le dedica una mirada de apuro. A ver cómo se explica con ella.
+    </p>
+
+    <p>—¿Es tuya la niña?</p>
+
+    <p>
+      Ah. Observa a Hyuk y a Erik, y por su faz pasa el <span style="color:purple;">pánico</span> fugazmente.
+      <em>¿Debería decirlo?</em> No lo ha consultado con la empresa.
+    </p>
+
+    <p>
+      Empieza a imaginar los comentarios en Internet de darse a conocer lo que Conan y su hermana hicieron.
+      De lo que Conan y ella están al cargo ahora.
+    </p>
+
+    <div class="centered top-gap">
+      <img
+        src="../img/tweet-ivy-400.webp"
+        alt="Tweet de DISPATCH donde se lee Ivy de 7*DREAMERS es ahora madre. Aunque todavía no contamos con una confirmación por parte de su empresa, nuestras fuentes la han visto en su actual vivienda junto a un bebé y un hombre que no es su novio Nick, también cantante. ¿Tiene Ivy Walker una doble vida? Via @noisyneighbour"
+        class="scene-image"
+        loading="lazy"
+        srcset="
+          ../img/tweet-ivy-400.webp 400w,
+          ../img/tweet-ivy-800.webp 800w,
+          ../img/tweet-ivy-1200.webp 1200w
+        "
+        sizes="
+          (max-width: 600px) 400px,
+          (max-width: 1200px) 800px,
+          1200px
+        "
+      />
+    </div>
+
+    <p>
+      Tras unos segundos dilucidando qué decir, la <span style="color:#c14444;">pelirroja</span> habla:
+    </p>
+
+    <p class="choices-line">
+      <a href="apagontresa.html" class="choice-link">Terry responde que sí</a><br />
+      <a href="apagontresb.html" class="choice-link">Terry responde que no</a>
+    </p>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">
+    Inventario
+  </button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="../javascript/inventory.js"></script>
+  <script src="../javascript/apagondos.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>

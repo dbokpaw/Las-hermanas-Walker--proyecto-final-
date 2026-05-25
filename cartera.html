@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cartera</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="scene-body">
+  <main class="scene-wrap grey-text">
+    <p id="c1" class="fade-line inline-fragments">  
+      <span id="c1a">Solo con extender la mano alcanzas la cartera que te compraste hace ya seis años. Dentro encuentras </span><span id="c2a" class="fade-line">varias tarjetas, <em>todas inútiles</em>, </span><span id="c3" class="fade-line">un par de billetes </span><span id="c4" class="fade-line">y una triste foto de una Ivy Walker en su debut.</span>
+    </p>
+
+    <div id="photo-wrap" class="centered fade-line">  
+      <img
+        src="img/cartera.jpg"
+        alt="Cartera color camel con fotografía antigua del debut de Ivy Walker."
+        class="scene-image"
+        loading="lazy"
+        width="300"
+        height="auto"
+        onerror="this.src='https://via.placeholder.com/300x200?text=Imagen+no+encontrada'"
+      />
+    </div>
+
+    <p id="c5" class="fade-line">  
+      Ahora está tan diferente… Aunque tienes sus rasgos tan bien perfilados en tu mente que eres capaz
+      de relacionar a la idol de aquel entonces, una adolescente tímida y recatada, con la artista actual.
+    </p>
+
+    <p id="c6" class="fade-line">  
+      Ah… Eso empieza a poner los mecanismos de tu mente a trabajar.
+      De pronto recuerdas a qué venía todo esto, por lo que buscas, al fin, la llave que abrirá el
+      <a href="primercajon.html" class="choice-link">primer cajón</a>.
+      La encuentras en el diminuto bolsillo para las monedas.
+      Sabes que ahí no se caería o perdería.
+    </p>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">
+    Inventario
+  </button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <!-- Script SIMPLIFICADO que NO depende de InventorySystem -->
+  <script>
+    // Mostrar el contenido con fade-in
+    document.addEventListener("DOMContentLoaded", function() {
+      console.log("DOM cargado - mostrando contenido");
+      
+      // Mostrar todos los fade-line
+      const elements = document.querySelectorAll('.fade-line');
+      elements.forEach((el, index) => {
+        setTimeout(() => {
+          el.classList.add('visible');
+          console.log("Mostrado elemento", index);
+        }, index * 300);
+      });
+      
+      // Intentar cargar inventario si existe
+      setTimeout(function() {
+        if (window.InventorySystem) {
+          console.log("InventorySystem encontrado");
+          try {
+            window.InventorySystem.addItemToInventory({
+              id: "llave-primer-cajon",
+              name: "Llave del primer cajón",
+              description: "Una llave pequeña guardada en el bolsillo de monedas de la cartera.",
+              category: "objeto",
+              rarity: 4,
+              icon: "img/llave.webp"
+            });
+            if (window.InventorySystem.initInventoryUI) {
+              window.InventorySystem.initInventoryUI();
+            }
+          } catch(e) {
+            console.error("Error con inventario:", e);
+          }
+        } else {
+          console.log("InventorySystem NO disponible");
+        }
+      }, 100);
+    });
+  </script>
+  
+  <!-- Carga los otros scripts después -->
+  <script src="javascript/inventory.js"></script>
+  <script src="javascript/cartera.js"></script>
+  <script src="javascript/investigation-layer.js"></script>
+</body>
+</html>

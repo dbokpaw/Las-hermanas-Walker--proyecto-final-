@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apagón Tres A</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="scene-body" data-tags="apagon">
+  <main class="scene-wrap grey-text">
+    <p>
+      —<em>Sí</em> —termina por decir—. Mía y de Conan, aquí presente. Se llama Aurora, ¿a que es la niña más bonita del mundo?
+      <br />
+      —Sí, sí que lo es. —declara Hyuk, con una mezcolanza de emociones en el pecho. No parece muy contento de lo que acaba
+      de descubrir, pero no miente al darle su parecer a la supuesta madre— ¿Qué edad tiene? Si puedo saber.
+    </p>
+
+    <p>
+      Más que complacida por las palabras del muchacho, la cantante esboza una sonrisa colmada de orgullo por la pequeña.
+      Se está haciendo con el cariño de todos de inmediato y le parece lo más lógico, de tan linda que es Aurora.
+    </p>
+
+    <p>
+      —Claro, tiene <span style="color:#f4f434;">once</span> meses. Está a punto de cumplir el año.
+    </p>
+
+    <p>
+      Hyuk no puede quedar más impactado por cada detalle de la novedad. Claro que había visto antes a Conan y a Ivy relacionarse,
+      pasaban bastante tiempo juntos, pero Conan y Aurora habían sido la comidilla de todo el edificio, encantados por la adorable cría.
+      Todos adoraban al que creían padre soltero, pero... ¿De dónde había salido aquello? ¿Por qué Ivy no dijo nada? ¿Aquella era la razón
+      por la que la actriz había sufrido un <span class="expand-text">hiatus</span> de un año?
+    </p>
+
+    <p>
+      La luz parpadeó unos instantes más hasta apagarse de forma indefinida. El malestar va en aumento a la par que el descontento.
+      Todos se preguntan dónde puede encontrarse <span class="pink-text">Nana</span>.
+    </p>
+
+    <p>
+      —<a href="apagoncuatroa.html" class="choice-link">Ivy y yo iremos a buscarla, ¿verdad?</a>
+    </p>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">Inventario</button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="../javascript/inventory.js"></script>
+  <script src="../javascript/apagontresa.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>

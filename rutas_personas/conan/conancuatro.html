@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conan Cuatro</title>
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body class="scene-body">
+  <main class="scene-wrap grey-text">
+    <p>
+      —Lo siento, de verdad... —La joven, agradecida por haberse apartado a un lugar más tranquilo, se toma la libertad
+      de distanciarse de Conan ligeramente. Es apenas un paso, pero éste le permite tomar una honda bocanada de aire—
+      Yo no soy Ivy. Soy su hermana, <span style="color:#5555ce;">Terry</span>.
+    </p>
+
+    <p>
+      Toda la expresión del muchacho cambia. Primero manifiesta una incomprensión absoluta, para luego pasar a la molestia
+      más sincera. En cierto sentido, Conan corrre el riesgo de recordar a Ivy como una beata porque en la esencia de su ser
+      se combinaban dos fuerzas extraordinarias: comprensión y sensibilidad.
+    </p>
+
+    <p>
+      Pero Terry... Aunque, gracias a Dios, Alá y Satanás, le pagan por fingir ser quien no es, sigue pasando un verdadero
+      calvario al enfrentar esta clase de situaciones.
+    </p>
+
+    <p>
+      —Ivy, tú nunca te has portado así. No me trates de imbécil.
+    </p>
+
+    <p>
+      Terry empieza a perder la paciencia. Lamentablemente siempre ha sido así, de mecha corta y rápida irritabilidad.
+      Los orificios nasales se ensanchan conforme trata de serenarse, y es en este momento cuando ha de tomar una decisión.
+    </p>
+
+    <p class="choices-line">
+      <a href="conantres.html" class="choice-link">Finge que nada ha pasado y sigue adelante como Ivy</a>
+      <span> | </span>
+      <a href="conancuatroa.html" class="choice-link">Terry pierde la paciencia</a>
+    </p>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">
+    Inventario
+  </button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="../../javascript/inventory.js"></script>
+  <script src="../../javascript/conancuatro.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>

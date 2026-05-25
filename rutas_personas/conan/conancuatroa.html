@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conan Cuatro A</title>
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body class="scene-body">
+  <main class="scene-wrap grey-text">
+    <p>
+      —Mira, tío, no me acuerdo ni de cómo te llamas, pero esta niña es mi sobrina, y estoy haciendo <em>todo</em>
+      lo que está en mi mano para no perder los nervios, ¿vale? Ahora mismo estoy echando un cable a Ivy —<em>Mentira</em>—,
+      para sacar adelante <span class="strike-text">sus chanchullos...</span> lo que tenía entre manos.
+    </p>
+
+    <p>
+      La chica posa la mano en la espalda foránea para llevarlo consigo. Un suave discurrir por el jardín del edificio
+      bajo la luna llena le apaciguará la feroz excitación. Conan no dice palabra, quizá <span class="shadow-text">turbado</span>
+      ante lo que se le revela.
+    </p>
+
+    <p>
+      —Y parece ser que... —<em>La muy cabrona</em>. Le nace decir la muy cabrona,
+      <span style="color:#b90404;">pero</span> hay niños delante— mi querida hermana me guardaba un secreto bastante grande.
+    </p>
+
+    <p>
+      Ambos lanzan una mirada de soslayo a la pequeña Aurora, quien ha terminado por caer rendida en el hombro de su padre.
+      Los mechones azabache de ambos se entremezclan.
+    </p>
+
+    <p>
+      —Ahora bien, yo estoy dispuesta a hacer mi parte, o más bien la que le tocaría a Ivy. Pero tú me tienes que prometer una cosa.
+      Es más, jura por la vida de tu hija que vas a tratarme como a Ivy, delante de todo el mundo. ¿De acuerdo? Por tu bien, y por el de todos.
+    </p>
+
+    <p>
+      Terry habría sido feliz en la Gestapo; su única idea de la justicia es que ella siempre tiene razón y todo ha de funcionar
+      tal y como ella desea. Quizá de puro milagro, Conan traga grueso y asiente. El joven que en otra época se habría incomodado
+      por tan extravagante, agresiva y brusca exigencia, no protesta.
+    </p>
+
+    <p>
+      Sea donde sea que se está metiendo, no tiene <a href="apagon.html" class="choice-link">escapatoria</a>.
+    </p>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">
+    Inventario
+  </button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="../../javascript/inventory.js"></script>
+  <script src="../../javascript/conancuatroa.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>

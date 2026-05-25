@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="scene-body">
+  <main class="scene-wrap grey-text">
+    <p>Ivy Walker es tu vida entera.</p>
+
+    <p>
+      Sabes cada detalle de la vida de tu querida Ivy. A fin de cuentas, ella salvó la tuya.
+      Te sientes en deuda. Sientes que le debes algo.
+    </p>
+
+    <p>
+      Y tiene que ser algo tan grande, tan significativo como el que ella, con su don, te salvara
+      de precipitarte al <span class="vacio-rotado">vacío</span>.
+    </p>
+
+    <p>
+      Tus ojos vagan por la habitación en <span class="penumbras">penumbras</span>. Pasas tanto tiempo en ella
+      que no importa que no haya luz, así que cuando pones la mirada en el escritorio, hay algo que te llama
+      especialmente la atención… ¿De qué se trata? ¿Se trata de la
+    <a href="cartera.html" class="choice-link">cartera</a>? ¿Del
+    <a href="primercajon.html" class="choice-link">primer cajón</a>? ¿Del
+    <a href="folioarrugado.html" class="choice-link">folio arrugado</a>?
+    </p>
+  </main>
+
+<button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">
+  Inventario
+</button>
+
+<aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+  <div class="inventory-header">
+    <h2>Inventario</h2>
+    <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+  </div>
+
+  <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+    <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+    <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+    <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+  </div>
+
+  <div class="inventory-layout">
+    <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+
+    <article class="inventory-detail">
+      <div class="detail-art" id="item-art">?</div>
+      <p id="item-badge" class="item-badge">Categoría</p>
+      <h3 id="item-title">Selecciona un elemento</h3>
+      <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+      <p id="item-text">Aquí aparecerá la descripción.</p>
+    </article>
+  </div>
+</aside>
+
+  <script src="./javascript/inventory.js"></script>
+  <script src="./javascript/inicio.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>

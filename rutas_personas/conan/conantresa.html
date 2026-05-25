@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conan Tres A</title>
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body class="scene-body">
+  <main class="scene-wrap grey-text">
+    <p>
+      —Entiendo que hayas estado... Ocupada —Conan se lleva continuamente la mano que no sostiene a la pequeña a la nuca.
+      Danza tanto que parece ser uno de los bailarines de Heizou. De repente esboza una sonrisa que muestra su incredulidad—
+      Oye, ya sé que estás que no paras por tus películas, y otras cosas que no tienes por qué contarme, tranquila.
+      <br />
+      —No seas bobo —Se le escapa, aunque trata de impregnarle a su intervención el encanto que Ivy le otorgaba a todo—.
+      Son cosas que te contaré… Poco a poco.
+    </p>
+
+    <p>
+      ¿Cuál era la confianza que Ivy había puesto en el hombre? Si bien parece dirigirse a ella con cierta complicidad y,
+      el resultado natural de su encuentro había sido el bebé, debía de ser alguien que le importase un mínimo.
+    </p>
+
+    <p>
+      Sabe de la dulzura y generosidad de Ivy, pero pone en entredicho que un…
+      <button id="toggle-evento" class="text-button underlined" type="button">Evento como aquel</button>
+      <span id="evento-texto" class="hidden strike-text"> — ¡coño, haberse quedado preñada por follarse al primero de turno!</span>
+    </p>
+
+    <p>
+      Carcomen sus entrañas la rabia e intranquilidad por la familia de la que de súbito forma parte. Esto no entraba en sus planes.
+      Cree que el contrato de noviazgo con Nick había sido limítrofe de lo estrictamente necesario, a fin de cuentas habían gustado al
+      ojo público y aquel enlace aumentó la popularidad de ambos, pero… Ser madre es algo muy serio.
+    </p>
+
+    <p>
+      Pero guarda para Terry una importancia vital y nadie debe crecer con carencias paternales cuando hay posibilidad de contar con ambas figuras.
+    </p>
+
+    <p>
+      —Si vamos a hacer esto juntos, quiero compromiso, Ivy. No puedo esperar a que vuelvas a desaparecer o te desentiendas de Aurora.
+    </p>
+
+    <p>Se permite unos segundos de silencio para escuchar y razonar.</p>
+
+    <p>—Sí… Quiero hacerlo bien. —dice en un susurro.</p>
+
+    <p>
+      Está dispuesta a ofrecerse en cuerpo y alma, a fin de cuentas, la parte más dura —a su juicio— ya está hecha:
+      nueve meses de embarazo y parto. Ahora es el turno de criarla. Mejor incluso de lo que lo habían hecho sus propios padres.
+    </p>
+
+    <p>
+      Cuando Conan le ofrece a la pequeña, Terry la sostiene con inmenso cuidado y la observa con afecto.
+      Es tan adorable que uno sonríe de forma <a href="../../apagon/apagon.html" class="choice-link">inevitable</a>.
+    </p>
+  </main>
+
+  <button id="inventory-toggle" class="inventory-toggle" type="button" aria-expanded="false">
+    Inventario
+  </button>
+
+  <aside id="inventory-panel" class="inventory-panel" aria-hidden="true">
+    <div class="inventory-header">
+      <h2>Inventario</h2>
+      <button id="inventory-close" class="inventory-close" type="button" aria-label="Cerrar inventario">✕</button>
+    </div>
+
+    <div class="inventory-tabs" role="tablist" aria-label="Categorías del inventario">
+      <button class="inventory-tab active" data-category="objeto" role="tab" aria-selected="true">Objetos</button>
+      <button class="inventory-tab" data-category="persona" role="tab" aria-selected="false">Personas</button>
+      <button class="inventory-tab" data-category="ruta" role="tab" aria-selected="false">Rutas</button>
+    </div>
+
+    <div class="inventory-layout">
+      <ul id="inventory-list" class="inventory-list" aria-label="Elementos del inventario"></ul>
+      <article class="inventory-detail">
+        <div class="detail-art" id="item-art">?</div>
+        <p id="item-badge" class="item-badge">Categoría</p>
+        <h3 id="item-title">Selecciona un elemento</h3>
+        <p id="item-stars" class="item-stars">☆☆☆☆☆</p>
+        <p id="item-text">Aquí aparecerá la descripción.</p>
+      </article>
+    </div>
+  </aside>
+
+  <script src="../../javascript/inventory.js"></script>
+  <script src="../../javascript/conantresa.js"></script>
+  <script src="./javascript/investigation-layer.js"></script>
+
+</body>
+</html>
