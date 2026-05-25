@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
       description: "Imágenes de Terry y Audrey obtenidas a través de Severance. Muestran a las dos juntas en una cafetería de Nueva York, caminando bajo la lluvia y en momentos íntimos que nunca debieron ser capturados.",
       category: "objeto",
       rarity: 5,
-      icon: "../img/fotoscomprometedoras-1200.webp",
+      icon: "fotoscomprometedoras-1200.webp",
       iconSet: {
-        srcset: "../img/fotoscomprometedoras-400.webp 400w, ../img/fotoscomprometedoras-800.webp 800w, ../img/fotoscomprometedoras-1200.webp 1200w",
+        srcset: "fotoscomprometedoras-400.webp 400w, fotoscomprometedoras-800.webp 800w, fotoscomprometedoras-1200.webp 1200w",
         sizes: "(max-width: 400px) 400px, 800px"
       }
     });
