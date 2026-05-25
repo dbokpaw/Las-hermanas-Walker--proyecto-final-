@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
       description: "En medio del caos de los apagones, Terry debe decidir qué responder sobre Aurora.",
       category: "ruta",
       rarity: 5,
-      icon: "../img/tweet-ivy.jpg"  
+      icon: "tweet-ivy.jpg"  
     });
 
     window.InventorySystem.initInventoryUI();
