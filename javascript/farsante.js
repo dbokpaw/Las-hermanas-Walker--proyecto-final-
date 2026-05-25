@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
       description: "Erik revela la verdad de Severance y confronta violentamente a Terry.",
       category: "ruta",
       rarity: 5,
-      icon: "ruta-farsante.webp"  
+      icon: "erik-cliente-severance.webp"  
     });
 
     window.InventorySystem.addItemToInventory({
