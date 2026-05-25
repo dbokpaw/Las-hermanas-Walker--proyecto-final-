@@ -16,11 +16,18 @@ function getBasePath() {
   // Caso 1: GitHub Pages (prioritario para tu proyecto)
   if (window.location.hostname.includes('github.io')) {
     // Obtiene el path completo, ej: "/Las-hermanas-Walker--proyecto-final-/"
-    const path = window.location.pathname;
-    // Asegura que termine con '/'
-    const basePath = path.endsWith('/') ? path : path.substring(0, path.lastIndexOf('/') + 1);
-    console.log(`[Inventario] Base path detectada (GitHub Pages): ${basePath}`);
-    return basePath;
+    let path = window.location.pathname;
+    
+    // Si la ruta no termina en /, extraer hasta la última carpeta
+    if (!path.endsWith('/')) {
+      const lastSlash = path.lastIndexOf('/');
+      if (lastSlash > 0) {
+        path = path.substring(0, lastSlash + 1);
+      }
+    }
+    
+    console.log(`[Inventario] Base path detectada (GitHub Pages): ${path}`);
+    return path;
   }
   
   // Caso 2: Desarrollo local con servidor (http://localhost)
@@ -43,35 +50,35 @@ function normalizeIconPath(iconPath) {
     return iconPath;
   }
   
-  // Si ya es ruta absoluta desde raíz
-  if (iconPath.startsWith('/')) {
-    return iconPath;
-  }
-  
   const basePath = getBasePath();
   
+  // Eliminar cualquier prefijo incorrecto
+  let cleanPath = iconPath;
+  
+  // Si la ruta ya contiene la base correcta, no la duplicamos
+  if (cleanPath.includes('/Las-hermanas-Walker--proyecto-final-/')) {
+    return cleanPath;
+  }
+  
+  // Eliminar prefijos incorrectos como /TFinal/
+  cleanPath = cleanPath.replace(/^\/TFinal\//, '');
+  cleanPath = cleanPath.replace(/^TFinal\//, '');
+  cleanPath = cleanPath.replace(/^\.\.\/img\//, '');
+  cleanPath = cleanPath.replace(/^\.\/img\//, '');
+  cleanPath = cleanPath.replace(/^img\//, '');
+  
   // Si es solo el nombre del archivo (sin carpetas)
-  if (!iconPath.includes('/')) {
-    return basePath + 'img/' + iconPath;
+  if (!cleanPath.includes('/')) {
+    return basePath + 'img/' + cleanPath;
   }
   
-  // Si empieza con img/ (relativa)
-  if (iconPath.startsWith('img/')) {
-    return basePath + iconPath;
-  }
-  
-  // Si empieza con ./img/
-  if (iconPath.startsWith('./img/')) {
-    return basePath + iconPath.substring(2);
-  }
-  
-  // Si empieza con ../img/
-  if (iconPath.startsWith('../img/')) {
-    return basePath + iconPath.substring(3);
+  // Si ya tiene img/ al inicio
+  if (cleanPath.startsWith('img/')) {
+    return basePath + cleanPath;
   }
   
   // Otros casos
-  return basePath + iconPath;
+  return basePath + 'img/' + cleanPath;
 }
 
 // ==================== FUNCIONES DE INVENTARIO ====================
