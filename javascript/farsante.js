@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
       description: "Erik revela la verdad de Severance y confronta violentamente a Terry.",
       category: "ruta",
       rarity: 5,
-      icon: "../img/ruta-farsante.webp"  // ← Icono específico para la ruta
+      icon: "ruta-farsante.webp"  
     });
 
     window.InventorySystem.addItemToInventory({
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       description: "Erik admite haber pagado por encuentros con Ivy y amenaza a Terry.",
       category: "persona",
       rarity: 5,
-      icon: "../img/erik-cliente-severance.webp"  
+      icon: "erik-cliente-severance.webp"  
     });
 
     window.InventorySystem.initInventoryUI();
