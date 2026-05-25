@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       description: "Documento que simboliza una renuncia: honor y estima a cambio de otra cosa.",
       category: "objeto",
       rarity: 5,
-      icon: "./img/contrato.webp"
+      icon: "contrato.webp"
     });
 
     window.InventorySystem.initInventoryUI();
