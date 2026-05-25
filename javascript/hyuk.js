@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
       description: "Conoces al fan número uno de Ivy y una tensión extraña con Erik.",
       category: "ruta",
       rarity: 4,
-      icon: "../img/hyukeivy-400.webp"  // ← Versión optimizada para icono
+      icon: "hyukeivy-400.webp"  
     });
 
     window.InventorySystem.addItemToInventory({
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       description: "Fan entusiasta de 7*DREAMERS. Vive en el Ático B con Erik.",
       category: "persona",
       rarity: 4,
-      icon: "../img/hyuk-icon.webp"  // ← Icono de Hyuk (si existe)
+      icon: "hyuk-icon.webp"  
     });
 
     window.InventorySystem.addItemToInventory({
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       description: "Amigo de Hyuk. Su actitud fría y burlona despierta sospechas.",
       category: "persona",
       rarity: 3,
-      icon: "../img/erik-icon.webp"  // ← Icono de Erik (si existe)
+      icon: "erik-icon.webp" 
     });
 
     window.InventorySystem.initInventoryUI();
