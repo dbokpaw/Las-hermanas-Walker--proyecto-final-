@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         description: "Tu ídolo. Su aparición te deja sin aliento.",
         category: "persona",
         rarity: 5,
-        icon: "./img/hi-ivy-telefonillo.gif"
+        icon: "hi-ivy-telefonillo.gif"  
         });
 
       ivyAdded = true;
