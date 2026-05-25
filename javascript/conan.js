@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
       description: "Una acusación inesperada revela un posible secreto de Ivy.",
       category: "ruta",
       rarity: 5,
-      icon: "../../img/conanybebe.webp"
+      icon: "conanybebe.webp"
     });
 
     window.InventorySystem.addItemToInventory({
