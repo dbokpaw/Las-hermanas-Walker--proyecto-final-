@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
       description: "Has revisado el móvil y detectado un patrón inquietante en redes.",
       category: "ruta",
       rarity: 4,
-      icon: "./img/movil02.jpg"
+      icon: "movil02.jpg"
     });
 
     // Personas mencionadas
