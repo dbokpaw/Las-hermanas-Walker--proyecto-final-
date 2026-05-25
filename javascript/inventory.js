@@ -11,23 +11,33 @@ const categoryLabels = {
 
 // ==================== FUNCIONES DE RUTAS ====================
 
-// Detectar la ruta base del proyecto automáticamente
+// Detectar la ruta base ABSOLUTA del proyecto (funciona desde cualquier subcarpeta)
 function getBasePath() {
   // Caso 1: GitHub Pages (prioritario para tu proyecto)
   if (window.location.hostname.includes('github.io')) {
     // Obtiene el path completo, ej: "/Las-hermanas-Walker--proyecto-final-/"
-    let path = window.location.pathname;
+    let pathname = window.location.pathname;
     
-    // Si la ruta no termina en /, extraer hasta la última carpeta
-    if (!path.endsWith('/')) {
-      const lastSlash = path.lastIndexOf('/');
-      if (lastSlash > 0) {
-        path = path.substring(0, lastSlash + 1);
-      }
+    // Busca la parte que contiene el nombre del repositorio
+    // Asume que el repositorio es "/Las-hermanas-Walker--proyecto-final-/"
+    const repoName = "/Las-hermanas-Walker--proyecto-final-/";
+    const repoIndex = pathname.indexOf(repoName);
+    
+    if (repoIndex !== -1) {
+      // Extrae la ruta hasta el final del nombre del repositorio
+      const base = pathname.substring(0, repoIndex + repoName.length);
+      console.log(`[Inventario] Base path detectada (GitHub Pages por nombre): ${base}`);
+      return base;
     }
     
-    console.log(`[Inventario] Base path detectada (GitHub Pages): ${path}`);
-    return path;
+    // Fallback: Si no encuentra el nombre, intenta con la lógica anterior pero limitada a la raíz
+    // Obtiene la primera parte de la ruta hasta la segunda barra
+    const parts = pathname.split('/').filter(p => p);
+    if (parts.length >= 1) {
+      const base = `/${parts[0]}/`;
+      console.log(`[Inventario] Base path detectada (GitHub Pages fallback): ${base}`);
+      return base;
+    }
   }
   
   // Caso 2: Desarrollo local con servidor (http://localhost)
@@ -36,7 +46,7 @@ function getBasePath() {
     return '/';
   }
   
-  // Caso 3: Fallback final para file://
+  // Caso 3: Fallback final
   console.log(`[Inventario] Base path detectada (Fallback): /`);
   return '/';
 }
