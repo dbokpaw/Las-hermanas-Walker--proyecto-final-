@@ -13,41 +13,36 @@ const categoryLabels = {
 
 // Detectar la ruta base ABSOLUTA del proyecto (funciona desde cualquier subcarpeta)
 function getBasePath() {
-  // Caso 1: GitHub Pages (prioritario para tu proyecto)
+  // Caso 1: GitHub Pages
   if (window.location.hostname.includes('github.io')) {
-    // Obtiene el path completo, ej: "/Las-hermanas-Walker--proyecto-final-/"
-    let pathname = window.location.pathname;
+    // Obtiene la URL completa
+    const url = window.location.href;
+    // Busca la parte del repositorio: "/Las-hermanas-Walker--proyecto-final-/"
+    const match = url.match(/(\/Las-hermanas-Walker--proyecto-final-\/)/);
     
-    // Busca la parte que contiene el nombre del repositorio
-    // Asume que el repositorio es "/Las-hermanas-Walker--proyecto-final-/"
-    const repoName = "/Las-hermanas-Walker--proyecto-final-/";
-    const repoIndex = pathname.indexOf(repoName);
-    
-    if (repoIndex !== -1) {
-      // Extrae la ruta hasta el final del nombre del repositorio
-      const base = pathname.substring(0, repoIndex + repoName.length);
-      console.log(`[Inventario] Base path detectada (GitHub Pages por nombre): ${base}`);
-      return base;
+    if (match) {
+      const basePath = match[1];
+      console.log(`[Inventario] Base path detectada: ${basePath}`);
+      return basePath;
     }
     
-    // Fallback: Si no encuentra el nombre, intenta con la lógica anterior pero limitada a la raíz
-    // Obtiene la primera parte de la ruta hasta la segunda barra
-    const parts = pathname.split('/').filter(p => p);
+    // Fallback: usa la primera parte del pathname
+    const parts = window.location.pathname.split('/').filter(p => p);
     if (parts.length >= 1) {
-      const base = `/${parts[0]}/`;
-      console.log(`[Inventario] Base path detectada (GitHub Pages fallback): ${base}`);
-      return base;
+      const basePath = `/${parts[0]}/`;
+      console.log(`[Inventario] Base path fallback: ${basePath}`);
+      return basePath;
     }
   }
   
-  // Caso 2: Desarrollo local con servidor (http://localhost)
-  if (window.location.protocol.startsWith('http') && !window.location.hostname.includes('github.io')) {
-    console.log(`[Inventario] Base path detectada (Localhost): /`);
+  // Caso 2: Desarrollo local
+  if (window.location.protocol.startsWith('http')) {
+    console.log(`[Inventario] Base path local: /`);
     return '/';
   }
   
-  // Caso 3: Fallback final
-  console.log(`[Inventario] Base path detectada (Fallback): /`);
+  // Caso 3: Fallback
+  console.log(`[Inventario] Base path fallback final: /`);
   return '/';
 }
 
