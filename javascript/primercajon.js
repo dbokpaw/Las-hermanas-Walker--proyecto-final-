@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     description: "El teléfono personal de Ivy Walker, oculto en el primer cajón.",
     category: "objeto",
     rarity: 5,
-    icon: "./img/movil01.jpg"
+    icon: "movil01.jpg"
     });
 
     // Ruta desbloqueada automáticamente al pasar por primer cajón
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     description: "Has abierto el primer cajón y descubierto el secreto que guarda.",
     category: "ruta",
     rarity: 4,
-    icon: "./img/movil01.jpg"
+    icon: "movil01.jpg"
     });
 
     window.InventorySystem.initInventoryUI();
