@@ -13,34 +13,24 @@ const categoryLabels = {
 
 // Detectar la ruta base del proyecto automáticamente
 function getBasePath() {
-  // Opción 1: Desde la etiqueta script actual
-  const scripts = document.getElementsByTagName('script');
-  for (let script of scripts) {
-    const src = script.src;
-    if (src && src.includes('/javascript/inventory.js')) {
-      const match = src.match(/(.*?\/TFinal\/)/);
-      if (match) {
-        return match[1];
-      }
-    }
-  }
-  
-  // Opción 2: GitHub Pages
+  // Caso 1: GitHub Pages (prioritario para tu proyecto)
   if (window.location.hostname.includes('github.io')) {
+    // Obtiene el path completo, ej: "/Las-hermanas-Walker--proyecto-final-/"
     const path = window.location.pathname;
-    const match = path.match(/(\/.*?\/TFinal\/)/);
-    if (match) {
-      return match[1];
-    }
-    return '/TFinal/';
+    // Asegura que termine con '/'
+    const basePath = path.endsWith('/') ? path : path.substring(0, path.lastIndexOf('/') + 1);
+    console.log(`[Inventario] Base path detectada (GitHub Pages): ${basePath}`);
+    return basePath;
   }
   
-  // Opción 3: Desarrollo local con file://
-  if (window.location.protocol === 'file:') {
+  // Caso 2: Desarrollo local con servidor (http://localhost)
+  if (window.location.protocol.startsWith('http') && !window.location.hostname.includes('github.io')) {
+    console.log(`[Inventario] Base path detectada (Localhost): /`);
     return '/';
   }
   
-  // Opción 4: Fallback
+  // Caso 3: Fallback final para file://
+  console.log(`[Inventario] Base path detectada (Fallback): /`);
   return '/';
 }
 
