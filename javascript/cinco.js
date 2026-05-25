@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
   aoiImageContainer.classList.add("hidden");
   heizouImageContainer.classList.add("hidden");
   
-  // Inventory System
+  // Inventory System - CORREGIDO: solo el nombre del archivo
   if (window.InventorySystem) {
     window.InventorySystem.addItemToInventory({
       id: "ruta-cinco",
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
       description: "Asistes a la reunión en el rellano y conoces a varios vecinos.",
       category: "ruta",
       rarity: 4,
-      icon: imgPath + "reunion-vecinal.webp"
+      icon: "reunion-vecinal.webp"  
     });
 
     window.InventorySystem.addItemToInventory({
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
       description: "Nuevo vecino del 9ºB. Ilustrador profesional.",
       category: "persona",
       rarity: 3,
-      icon: imgPath + "aoi.webp"
+      icon: "aoi.webp"  
     });
 
     window.InventorySystem.addItemToInventory({
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
       description: "Vecino de humor burlón; prefiere coreografías antes que cocinar.",
       category: "persona",
       rarity: 3,
-      icon: imgPath + "heizou.webp"
+      icon: "heizou.webp"  
     });
 
     window.InventorySystem.addItemToInventory({
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
       description: "Otro de los vecinos presentes en la reunión.",
       category: "persona",
       rarity: 2,
-      icon: imgPath + "akio.webp"
+      icon: "akio.webp"  
     });
 
     window.InventorySystem.addItemToInventory({
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
       description: "Vecino lacónico; se presenta con un escueto 'eh'.",
       category: "persona",
       rarity: 2,
-      icon: imgPath + "youra.webp"
+      icon: "youra.webp"  
     });
 
     window.InventorySystem.initInventoryUI();
