@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
       description: "Arma con la que Erik intenta someter a Terry en el rellano.",
       category: "objeto",
       rarity: 5,
-      icon: "../img/navaja.webp"
+      icon: "navaja.webp"
     });
 
     window.InventorySystem.initInventoryUI();
