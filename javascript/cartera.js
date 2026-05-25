@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         description: "Una llave pequeña guardada en el bolsillo de monedas de la cartera.",
         category: "objeto",
         rarity: 4,
-        icon: "img/llave.webp"  
+        icon: "llave.webp"  
       });
 
       // Ruta Cartera
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         description: "Has explorado la cartera y encontrado una pista clave.",
         category: "ruta",
         rarity: 3,
-        icon: "img/cartera-400.webp"  
+        icon: "cartera-400.webp"  
       });
 
       // Cartera de Ivy
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         description: "Una cartera gastada por el tiempo, pero valiosa por todo lo que contiene y representa.",
         category: "objeto",
         rarity: 5,
-        icon: "img/cartera-400.webp"  
+        icon: "cartera-400.webp"  
       });
       
       // Inicializar UI del inventario
